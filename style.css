@@ -7,6 +7,27 @@ body {
     width: 100%;
 }
 
+menu ul {
+    list-style-type: none;
+}
+
+#tutorials-submenu.show {
+    display: block;
+}
+
+#tutorials-submenu:not(.show) {
+    display: none;
+}
+
+#currentpagebtn {
+    color: green;
+}
+
+a, a:hover, a:visited {
+    text-decoration: none;
+    color: #0066ff;
+}
+
 @media screen and (min-width: 600px) {
     .mobileonly {
         display: none;
@@ -34,11 +55,16 @@ body {
         box-sizing: border-box;
         position: absolute;
         left: 15%;
-        min-width: 85%;
-        max-width: 85%;
+        min-width: 84%;
+        max-width: 84%;
         width: 85%;
         margin: 0px 1% 0px;
         background-color: #fff;
+    }
+
+    header > h1 {
+        display: inline;
+        margin-left: 16%;
     }
 }
     

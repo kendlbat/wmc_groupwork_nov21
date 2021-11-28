@@ -1,0 +1,11 @@
+body {
+    background: linear-gradient(to bottom, lime 100%, turquoise 0%);
+}
+
+@media screen and (max-width: 599px) {
+    
+}
+
+@media screen and (min-width: 600px) {
+    
+}

@@ -1,16 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Arsić & Kendlbacher">
-        <meta name="description" content="JavaScript Tutorials als WMC-Projekt von Noah Arsić und Tobias Kendlbacher">
-        <title>JavaScript Tutorials</title>
-    </head>
-    <body>
-        <header></header>
-        <main></main>
-        <footer></footer>
-    </body>
+<html lang="de-AT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;600&family=Open+Sans:wght@300;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="mobileonly" onclick="document.getElementById('menu').classList.toggle('mobileshow')" href="javascript:void(0);">
+            <div class="imgbox" id="menubtn">
+                <img src="assets/menu.svg" alt="Menu">
+            </div>
+        </div>
+        <h1>JavaScript Tutorials</h1>
+    </header>
+    <menu id="menu">
+        <h1>Tutorials</h1>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+        </ul>
+    </menu>
+    <main>  
+        <article>
+            <section>
+                <h2>Herzlich Willkommen zu unserer Webseite</h2>
+                <p>Hier finden Sie alles, was Sie zum Thema JavaScript wissen müssen.</p>
+                <p>Wir sind Noah Arsi&cacute; und Tobias Kendlbacher, und diese Seite entsteht als
+                    Projekt für WMC.<p>
+            </section>
+        </article>
+    </main>
+</body>
+
 </html>

@@ -1,11 +1,90 @@
 body {
-    background: linear-gradient(to bottom, lime 100%, turquoise 0%);
+    background-color: white;
+    font-family: "Hind Siliguri", sans-serif;
 }
 
-@media screen and (max-width: 599px) {
-    
+.imgbox img {
+    width: 100%;
 }
 
 @media screen and (min-width: 600px) {
+    .mobileonly {
+        display: none;
+    }
     
+    menu {
+        box-sizing: border-box;
+        position: absolute;
+        padding: 1% 0px;
+        width: 15%;
+        max-width: 15%;
+        min-height: 100%;
+        top: 0px;
+        left: 0px;
+        margin-top: 0px;
+        border-right: 1px solid #111;
+        background-color: #aaa;
+        }
+    
+    main {
+        box-sizing: border-box;
+        position: absolute;
+        left: 15%;
+        min-width: 85%;
+        max-width: 85%;
+        width: 85%;
+        margin: 0px 1% 0px;
+        background-color: #fff;
+    }
+}
+    
+@media screen and (max-width: 599px) {
+    menu {
+        display: none;
+    }
+    
+    .mobileonly {
+        display: show;
+    }
+
+    header > h1 {
+        display: inline;
+        margin-left: 5%;
+    }
+
+    /*Parent of #menubtn*/
+    #menubtn {
+        border: 1px solid black;
+        border-radius: 15px;
+        width: 15%;
+        max-width: 15%;
+        float: left;
+        margin-top: 1%;
+        margin-left: 1%;
+        aspect-ratio: 1;
+        display: grid;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    /*Center the <h1> so it is next to the svg image*/
+    header > h1 {
+        display: inline;
+        margin-left: 5%;
+    }
+
+    #menubtn img {
+        margin: 10%;
+        width: 80%;
+        aspect-ratio: 1;
+    }
+
+    .mobileshow {
+        box-sizing: border-box;
+        border: 1px solid black;
+        border-radius: 15px;
+        display: block;
+        min-height: 100%;
+        min-width: 100%;
+    }
 }

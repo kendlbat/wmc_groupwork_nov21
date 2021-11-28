@@ -24,7 +24,11 @@ body {
         margin-top: 0px;
         border-right: 1px solid #111;
         background-color: #aaa;
-        }
+    }
+
+    menu > h1 {
+        margin-left: 10%;
+    }
     
     main {
         box-sizing: border-box;

@@ -7,6 +7,28 @@ body {
     width: 100%;
 }
 
+.code {
+    background: #ddd;
+    margin: 0px 2%;
+    padding-left: 1%;
+}
+
+.code + small {
+    margin-left: 2%;
+}
+
+.keyword {
+    color: blue;
+}
+
+.value {
+    color: red;
+}
+
+code > p {
+    margin: 1% 0px;
+}
+
 menu ul {
     list-style-type: none;
 }
@@ -28,14 +50,31 @@ a, a:hover, a:visited {
     color: #0066ff;
 }
 
+h2 {
+    text-align: center;
+}
+
+section > img {
+    display: block;
+    margin: 0px auto;
+}
+
 @media screen and (min-width: 600px) {
     .mobileonly {
         display: none;
     }
     
+    article {
+        font-size: 1.5em;
+    }
+
+    code {
+        font-size: 1.2em;
+    }
+
     menu {
         box-sizing: border-box;
-        position: absolute;
+        position: fixed;
         padding: 1% 0px;
         width: 15%;
         max-width: 15%;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,10 +13,12 @@
         rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
     <h1 id="noloadwarn" style="font-size: xx-large;">Es gab einen Fehler beim Laden des Stylesheets!<br>Versuche die Seite erneut zu laden!</h1>
     <header>
-        <div class="mobileonly" onclick="document.getElementById('menu').classList.toggle('mobileshow')" href="javascript:void(0);">
+        <div class="mobileonly" onclick="document.getElementById('menu').classList.toggle('mobileshow')"
+            href="javascript:void(0);">
             <div class="imgbox" id="menubtn">
                 <img src="/assets/menu.svg" alt="Menu">
             </div>
@@ -27,7 +30,8 @@
         <ul>
             <li><a href="/index.html">HOME</a></li>
             <li>
-                <a href="javascript:void(0);" onclick="document.getElementById('tutorials-submenu').classList.toggle('show');">TUTORIALS</a>
+                <a href="javascript:void(0);"
+                    onclick="document.getElementById('tutorials-submenu').classList.toggle('show');">TUTORIALS</a>
                 <ul id="tutorials-submenu" class="show">
                     <li><a href="01_introduction.html">01 - Einf&uuml;hrung</a></li>
                     <li><a href="02_variables.html" id="currentpagebtn">02 - Variablen</a></li>
@@ -35,7 +39,7 @@
                     <li><a href="04_if_else.html">04 - If-Else</a></li>
                     <li><a href="05_for_loop.html">05 - For-Loop</a></li>
                     <li><a href="06_while_loop.html">06 - While-Loop</a></li>
-                    <li><a href="07_functions.html">07 - Functionen</a></li>
+                    <li><a href="07_functions.html">07 - Funktionen</a></li>
                     <li><a href="08_objects.html">08 - Objekte</a></li>
                     <li><a href="09_arrays.html">09 - Arrays</a></li>
                     <li><a href="10_strings.html">10 - Strings</a></li>
@@ -44,5 +48,63 @@
             <li><a href="/imprint.html">IMPRESSUM</a></li>
         </ul>
     </menu>
+    <main>
+        <article>
+            <section>
+                <h2>Variablen in JavaScript</h2>
+                <p>Um Variablen in JavaScript zu deklarieren, stehen drei Schl&uuml;sselw&ouml;rter zur Verf&uuml;gung:</p>
+                <ul>
+                    <li><code>var</code></li>
+                    <li><code>let</code></li>
+                    <li><code>const</code></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Das Schl&uuml;sselwort: <code>var</code></h3>
+                <p>Das wichtigste und wahrscheinlich auch das meistverwendeste Schlüsselwort zur Deklaration
+                    einer Variablen ist wahrscheinlich <code>var</code>. Dabei kann <code>var</code>
+                    Jegliche Art von Daten speichern, also Integer, Floats aber auch Chars und sogar Strings.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 1: </h4>
+                <div class="code">
+                    <code>
+                        <p><span class="keyword">var</span> x = <span class="value">4</span>;</p>
+                        <p><span class="keyword">var</span> y = <span class="value">3</span>;</p>
+                        <p><span class="keyword">var</span> z = x + y;</p>
+                        <p>console.log(z);</p>
+                    </code>
+                </div>
+                <small>Output: 7</small>
+                <h4>Beispielcode 2:</h4>
+                <div class="code">
+                    <code>
+                        <p><span class="keyword">var</span> x = <span class="value">"Hello World"</span>;</p>
+                        <p>console.log(x)</p>
+                    </code>
+                </div>
+                <small>Output: Hello World</small>
+            </section>
+            <section>
+                <p>Dabei m&uuml;ssen diese Variablen w&auml;hrend der Deklaration nicht inizialisiert werden.
+                    Es ist auch m&ouml;lich, eine Variable aus Versehen doppelt zu deklarieren. Dabei ist, falls
+                    w&auml;hrend der Deklaration kein Wert &uuml;bergeben wird, kein Verlust von Werten zu erwarten.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 3:</h4>
+                <div class="code">
+                    <code>
+                        <p><span class="keyword">var</span> x;</p>
+                        <p>x = <span class="value">4</span>;</p>
+                        <p><span class="keyword">var</span> x;</p>
+                        <p>console.log(x);</p>
+                    </code>
+                </div>
+                <small>Output: 4</small>
+            </section>
+        </article>
+    </main>
 </body>
 </html>

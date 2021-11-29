@@ -7,6 +7,10 @@ body {
     width: 100%;
 }
 
+#noloadwarn {
+    display: none;
+}
+
 menu ul {
     list-style-type: none;
 }

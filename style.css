@@ -11,6 +11,10 @@ body {
     display: none;
 }
 
+.indent {
+    margin-left: 2%;
+}
+
 .code {
     background: #ddd;
     margin: 0px 2%;
@@ -33,8 +37,8 @@ code > p {
     margin: 1% 0px;
 }
 
-menu ul {
-    list-style-type: none;
+menu ol {
+    color: #0066ff;
 }
 
 #tutorials-submenu.show {
@@ -49,7 +53,7 @@ menu ul {
     color: green;
 }
 
-a, a:hover, a:visited {
+a {
     text-decoration: none;
     color: #0066ff;
 }

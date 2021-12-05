@@ -169,3 +169,18 @@ section > img {
         min-width: 100%;
     }
 }
+
+@media print {
+    header {
+        display: none;
+    }
+
+    menu {
+        display: none;
+    }
+
+    main {
+        display: block;
+        margin: 0px auto;
+    }
+}

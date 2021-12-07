@@ -53,6 +53,10 @@ menu ol {
     color: green;
 }
 
+#currentpagebtn > a {
+    color: green;
+}
+
 a {
     text-decoration: none;
     color: #0066ff;

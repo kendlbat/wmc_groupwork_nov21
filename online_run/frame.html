@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button id="runbtn" onclick="runJavascriptInTextblock()" href="javascript:void(0)">RUN CODE</button>
+        <button id="outbtn" onclick="document.getElementById('output').classList.toggle('shown')" href="javascript:void(0)">SHOW/HIDE OUTPUT</button>
+    </header>
+    <div id="output" class="shown">
+        <p><b>Output:</b></p>
+        <p id="outputtext"></p>
+    </div>
+    <div id="codeindiv">
+        <textarea rows="5" id="codeinput" placeholder="Type your code here..."></textarea>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -15,7 +15,7 @@
     <title>JavaScript Tutorials</title>
 </head>
 
-<body>
+<body style="height: 100vh; overflow: hidden;">
     <h1 id="noloadwarn" style="font-size: xx-large;">Es gab einen Fehler beim Laden des Stylesheets!<br>Versuche die Seite erneut zu laden!</h1>
     <header>
         <div class="mobileonly" onclick="document.getElementById('menu').classList.toggle('mobileshow')" href="javascript:void(0);">
@@ -28,7 +28,7 @@
     <menu id="menu">
         <h1>Men&uuml;</h1>
         <ul>
-            <li id="currentpagebtn"><a href="/index.html">HOME</a></li>
+            <li><a href="/index.html">HOME</a></li>
             <li>
                 <a href="javascript:void(0);" onclick="document.getElementById('tutorials-submenu').classList.toggle('show');">TUTORIALS</a>
                 <ol id="tutorials-submenu">
@@ -44,20 +44,12 @@
                     <li><a href="/tutorials/10_strings.html"> - Strings</a></li>
                 </ol>
             </li>
-            <li><a href="/run_online.html">RUN CODE</a></li>
+            <li id="currentpagebtn"><a href="/run_online.html">RUN CODE</a></li>
             <li><a href="/imprint.html">IMPRESSUM</a></li>
         </ul>
     </menu>
-    <main>  
-        <article>
-            <section>
-                <h2>Herzlich Willkommen zu unserer Webseite</h2>
-                <img src="/assets/JS.png" alt="Das Logo von JavaScript">
-                <p>Hier finden Sie alles, was Sie zum Thema JavaScript wissen m&uuml;ssen.</p>
-                <p>Wir sind Noah Arsi&cacute; und Tobias Kendlbacher, und diese Seite entsteht als
-                    Projekt für WMC.<p>
-            </section>
-        </article>
+    <main style="height: 90%;">  
+        <iframe src="/online_run/frame.html" frameborder="0" style='width: 100%; height: 100%;'></iframe>
     </main>
 </body>
 </html>

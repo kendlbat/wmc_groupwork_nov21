@@ -71,6 +71,29 @@ section > img {
     margin: 0px auto;
 }
 
+table {
+    width: 90%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+tr:nth-child(even) {
+    background: #eee;
+}
+
+td:first-child {
+    padding-left: 1%;
+}
+
+th:first-child {
+    padding-left: 1%;
+}
+
+th, td {
+    width: 10%;
+    text-align: left;
+}
+
 @media screen and (min-width: 600px) {
     .mobileonly {
         display: none;

@@ -8,10 +8,20 @@
 </head>
 <body>
     <header>
-        <button id="runbtn" onclick="runJavascriptInTextblock()" href="javascript:void(0)">RUN CODE</button>
-        <button id="outbtn" onclick="document.getElementById('output').classList.toggle('shown')" href="javascript:void(0)">SHOW/HIDE OUTPUT</button>
+        <div id="fileoptions">
+            <form action="javascript:loadFile()" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" id="file">
+                <input type="submit" value="📂">
+            </form>
+            <form action="javascript:saveFile()" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" id="file">
+                <input type="submit" value="💾">
+            </form>
+        </div>
+        <button id="runbtn" href="javascript:void(0)">RUN CODE</button>
+        <button id="outbtn" onclick="document.getElementById('output').classList.toggle('shown')" href="javascript:void(0)">SHOW/HIDE "CONSOLE"</button>
     </header>
-    <div id="output" class="shown">
+    <div id="output">
         <p><b>Output:</b></p>
         <p id="outputtext"></p>
     </div>

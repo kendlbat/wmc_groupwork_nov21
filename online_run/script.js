@@ -1,16 +1,27 @@
 var output = [];
 var outputs = 0;
 
-function runJavascriptInTextblock() {
+console.log("SCRIPT LOADED");
+
+async function execJSText() {
     var textblock = document.getElementById('codeinput');
     var text = String(textblock.value);
 
     text = text.replace("console.log", "RES_printValue");
 
-    eval(text);
+    try {
+        eval(text);
+    } catch (error) {
+        RES_printValue(error);
+    }
 }
 
-function RES_printValue(value) {
+function runJavascriptInTextblock() {
+    execJSText();
+}
+
+// value has to be string
+function RES_printValue(value) {	
     // Append value to output array
     // Update outputtext innerText
     // Print the number of times this function has been called so far on the left of the lines
@@ -27,4 +38,4 @@ function RES_printValue(value) {
     outputs++;
 }
 
-
+document.getElementById("runbtn").onclick = runJavascriptInTextblock;

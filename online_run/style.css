@@ -53,6 +53,22 @@ body.embed {
     height: 20vh;
 }
 
+#runoptions button {
+    border: 1px solid #888;
+    border-radius: 4px;
+}
+
+#runbtn > span > img {
+    aspect-ratio: 1;
+    height: 100%;
+}
+
+#runbtn > span {
+    display: block;
+    height: 1em;
+    width: 1em;
+}
+
 #runbtn:hover, #outbtn:hover {
     border: 1px solid #666;
     border-radius: 4px;

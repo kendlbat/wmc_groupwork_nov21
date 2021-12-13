@@ -1,6 +1,7 @@
 body * {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 body.embed {
@@ -17,10 +18,14 @@ body.embed {
 
 #fileoptions {
     display: flex;
+    flex-direction: row;
+    gap: 2px;
 }
 
 #options {
     display: flex;
+    flex-direction: row;
+    gap: 2px;
 }
 
 #fileoptions input, #runoptions button {
@@ -29,6 +34,8 @@ body.embed {
 
 #runoptions {
     display: flex;
+    flex-direction: row;
+    gap: 2px;
 }
 
 #codeindiv {
@@ -48,6 +55,7 @@ body.embed {
 
 #runbtn:hover, #outbtn:hover {
     border: 1px solid #666;
+    border-radius: 4px;
 }
 
 #codeinput {

@@ -11,8 +11,6 @@ async function execJSText() {
     // replace all occurences of "console.log" with "RES_printValue
     text = text.replace(/console.log/g, "RES_printValue");
 
-    console.log(text);
-
     try {
         eval(text);
     } catch (error) {

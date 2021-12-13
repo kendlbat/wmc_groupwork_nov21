@@ -3,6 +3,26 @@ body * {
     -moz-box-sizing: border-box;
 }
 
+body.embed {
+    overflow: hidden;
+}
+
+.nodisplay {
+    display: none;
+}
+
+.nodisplay * {
+    display: none;
+}
+
+#fileoptions {
+    display: flex;
+}
+
+#fileoptions input {
+    font-size: x-large;
+}
+
 #codeindiv {
     height: 82vh;
     width: 100%;
@@ -69,4 +89,8 @@ body * {
 
 #output:hover {
     border: 1px solid #666;
+}
+
+#file-loader {
+    display: none;
 }

@@ -112,6 +112,10 @@ th, td {
     .mobileonly {
         display: none;
     }
+
+    body {
+        padding-left: 195px;
+    }
     
     article {
         font-size: 1.5em;
@@ -127,6 +131,7 @@ th, td {
         padding: 1% 0px;
         width: 15%;
         max-width: 15%;
+        min-width: 195px;
         min-height: 100%;
         top: 0px;
         left: 0px;
@@ -146,13 +151,14 @@ th, td {
         min-width: 84%;
         max-width: 84%;
         width: 85%;
+        overflow-x: hidden;
         margin: 0px 1% 0px;
         background-color: #fff;
     }
 
     header > h1 {
         display: inline;
-        margin-left: 16%;
+        margin-left: 6%;
     }
 }
     

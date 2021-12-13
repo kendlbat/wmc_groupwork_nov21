@@ -109,7 +109,7 @@ th, td {
 }
 
 @media screen and (min-width: 600px) {
-    .mobileonly {
+    .mobileonly, .mobileonly * {
         display: none;
     }
 
@@ -237,11 +237,12 @@ th, td {
         cursor: pointer;
     }
 
-    #mobilemenuexit > p {
+    #mobilemenuexit > img {
         position: relative;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        left: 0px;
+        top: 90%;
+        aspect-ratio: 1;
+        width: 26px;
     }
 }
 

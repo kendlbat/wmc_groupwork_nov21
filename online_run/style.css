@@ -19,36 +19,22 @@ body.embed {
     display: flex;
 }
 
-#fileoptions input {
+#options {
+    display: flex;
+}
+
+#fileoptions input, #runoptions button {
     font-size: x-large;
+}
+
+#runoptions {
+    display: flex;
 }
 
 #codeindiv {
     height: 82vh;
     width: 100%;
     overflow: hidden;
-}
-
-#runbtn {
-    display: block;
-    min-height: 1.5em;
-    float: left;
-    width: 50%;
-    height: 5vh;
-    margin-bottom: 1px;
-    border-radius: 3px;
-    border: 1px solid #888;
-}
-
-#outbtn {
-    display: block;
-    float: right;
-    height: 5vh;
-    min-height: 1.5em;
-    margin-bottom: 1px;
-    border-radius: 3px;
-    border: 1px solid #888;
-    width: 50%;
 }
 
 #output:not(.shown) {

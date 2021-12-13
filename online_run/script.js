@@ -8,7 +8,10 @@ async function execJSText() {
     var textblock = document.getElementById('codeinput');
     var text = String(textblock.value);
 
-    text = text.replace("console.log", "RES_printValue");
+    // replace all occurences of "console.log" with "RES_printValue
+    text = text.replace(/console.log/g, "RES_printValue");
+
+    console.log(text);
 
     try {
         eval(text);

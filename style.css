@@ -168,7 +168,7 @@ th, td {
     }
     
     .mobileonly {
-        display: show;
+        display: block;
     }
 
     header > h1 {
@@ -206,10 +206,42 @@ th, td {
     .mobileshow {
         box-sizing: border-box;
         border: 1px solid black;
-        border-radius: 15px;
+        border-radius: 0px;
         display: block;
         min-height: 100%;
         min-width: 100%;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        margin-top: 0px;
+        background-color: white;
+    }
+
+    menu > h1 {
+        float: left;
+        width: 90%;
+        height: 3%;
+        top: 1%;
+    }
+
+    #mobilemenuexit {
+        float: right;
+        top: 1%;
+        width: 10%;
+        height: 1%;
+        vertical-align: middle;
+        font-size: xx-large;
+    }
+
+    #mobilemenuexit:hover {
+        cursor: pointer;
+    }
+
+    #mobilemenuexit > p {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 

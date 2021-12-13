@@ -7,6 +7,10 @@ body {
     width: 100%;
 }
 
+#noloadwarn {
+    display: none;
+}
+
 .indent {
     margin-left: 2%;
 }
@@ -30,7 +34,17 @@ body {
 }
 
 code > p {
-    margin: 1% 0px;
+    margin: 0.1em 0px;
+}
+
+.code iframe {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.code {
+    padding: 0px 5px 5px 5px;
 }
 
 menu ol {
@@ -49,6 +63,10 @@ menu ol {
     color: green;
 }
 
+#currentpagebtn > a {
+    color: green;
+}
+
 a {
     text-decoration: none;
     color: #0066ff;
@@ -58,14 +76,45 @@ h2 {
     text-align: center;
 }
 
+ul {
+    list-style: none;
+}
+
 section > img {
     display: block;
     margin: 0px auto;
 }
 
+table {
+    width: 90%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+tr:nth-child(even) {
+    background: #eee;
+}
+
+td:first-child {
+    padding-left: 1%;
+}
+
+th:first-child {
+    padding-left: 1%;
+}
+
+th, td {
+    width: 10%;
+    text-align: left;
+}
+
 @media screen and (min-width: 600px) {
     .mobileonly {
         display: none;
+    }
+
+    body {
+        padding-left: 195px;
     }
     
     article {
@@ -82,6 +131,7 @@ section > img {
         padding: 1% 0px;
         width: 15%;
         max-width: 15%;
+        min-width: 195px;
         min-height: 100%;
         top: 0px;
         left: 0px;
@@ -101,13 +151,14 @@ section > img {
         min-width: 84%;
         max-width: 84%;
         width: 85%;
+        overflow-x: hidden;
         margin: 0px 1% 0px;
         background-color: #fff;
     }
 
     header > h1 {
         display: inline;
-        margin-left: 16%;
+        margin-left: 6%;
     }
 }
     
@@ -117,7 +168,7 @@ section > img {
     }
     
     .mobileonly {
-        display: show;
+        display: block;
     }
 
     header > h1 {
@@ -155,9 +206,56 @@ section > img {
     .mobileshow {
         box-sizing: border-box;
         border: 1px solid black;
-        border-radius: 15px;
+        border-radius: 0px;
         display: block;
         min-height: 100%;
         min-width: 100%;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        margin-top: 0px;
+        background-color: white;
+    }
+
+    menu > h1 {
+        float: left;
+        width: 90%;
+        height: 3%;
+        top: 1%;
+    }
+
+    #mobilemenuexit {
+        float: right;
+        top: 1%;
+        width: 10%;
+        height: 1%;
+        vertical-align: middle;
+        font-size: xx-large;
+    }
+
+    #mobilemenuexit:hover {
+        cursor: pointer;
+    }
+
+    #mobilemenuexit > p {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media print {
+    header {
+        display: none;
+    }
+
+    menu {
+        display: none;
+    }
+
+    main {
+        display: block;
+        margin: 0px auto;
     }
 }

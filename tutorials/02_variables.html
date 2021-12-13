@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Einf&uuml;hrung</title>
+    <title>Variablen</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,6 +15,8 @@
 </head>
 
 <body>
+    <h1 id="noloadwarn" style="font-size: xx-large;">Es gab einen Fehler beim Laden des Stylesheets!<br>Versuche die
+        Seite erneut zu laden!</h1>
     <header>
         <div class="mobileonly" onclick="document.getElementById('menu').classList.toggle('mobileshow')"
             href="javascript:void(0);">
@@ -24,28 +26,6 @@
         </div>
         <h1>JavaScript Tutorials</h1>
     </header>
-    <menu id="menu">
-        <h1>Men&uuml;</h1>
-        <ul>
-            <li><a href="/index.html">HOME</a></li>
-            <li>
-                <a href="javascript:void(0);"
-                    onclick="document.getElementById('tutorials-submenu').classList.toggle('show');">TUTORIALS</a>
-                <ol id="tutorials-submenu">
-                    <li><a href="01_introduction.html"> - Einf&uuml;hrung</a></li>
-                    <li><a href="02_variables.html"> - Variablen</a></li>
-                    <li><a href="03_operators.html"> - Operatoren</a></li>
-                    <li><a href="04_if_else.html"> - If-Else</a></li>
-                    <li><a href="05_for_loop.html"> - For-Loop</a></li>
-                    <li><a href="06_while_loop.html"> - While-Loop</a></li>
-                    <li><a href="07_functions.html"> - Funktionen</a></li>
-                    <li><a href="08_objects.html"> - Objekte</a></li>
-                    <li><a href="09_arrays.html"> - Arrays</a></li>
-                    <li><a href="10_strings.html"> - Strings</a></li>
-                </ol>
-            </li>
-        </ul>
-    </menu>
     <main>
         <article>
             <section>
@@ -67,21 +47,15 @@
             </section>
             <section>
                 <h4>Beispielcode 1: </h4>
-                <div class="code">
-                    <code>
-                        <p><span class="keyword">var</span> x = <span class="value">4</span>;</p>
-                        <p><span class="keyword">var</span> y = <span class="value">3</span>;</p>
-                        <p><span class="keyword">var</span> z = x + y;</p>
-                        <p>console.log(z);</p>
-                    </code>
+                <div class="code" style="height: 150px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t01-01&outlines=3" frameborder="0"
+                        style="height: 100%;"></iframe>
                 </div>
                 <small>Output: 7</small>
                 <h4>Beispielcode 2:</h4>
-                <div class="code">
-                    <code>
-                        <p><span class="keyword">var</span> x = <span class="value">"Hello World"</span>;</p>
-                        <p>console.log(x)</p>
-                    </code>
+                <div class="code" style="height: 150px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t01-02&outlines=3" frameborder="0"
+                        style="height: 100%;"></iframe>
                 </div>
                 <small>Output: Hello World</small>
             </section>
@@ -93,19 +67,16 @@
             </section>
             <section>
                 <h4>Beispielcode 3:</h4>
-                <div class="code">
-                    <code>
-                        <p><span class="keyword">var</span> x;</p>
-                        <p>x = <span class="value">4</span>;</p>
-                        <p><span class="keyword">var</span> x;</p>
-                        <p>console.log(x);</p>
-                    </code>
+                <div class="code" style="height: 150px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t01-03&outlines=3" frameborder="0"
+                        style="height: 100%;"></iframe>
                 </div>
                 <small>Output: 4</small>
             </section>
             <section>
                 <h3>Das Schl&uuml;sselwort: <code>let</code></h3>
-                <p>Das Schl&uuml;sselwort <code>let</code> verh&auml;lt sich ziemlich &auml;hnlich zum Schl&uuml;sselwort
+                <p>Das Schl&uuml;sselwort <code>let</code> verh&auml;lt sich ziemlich &auml;hnlich zum
+                    Schl&uuml;sselwort
                     <code>var</code>, jedoch hat dieses einige Eigenschaften, die nicht zu vernachl&auml;ssigen sind.
                     So k&ouml;nnen Variablen, die mit <code>let</code> deklariert wurden, nicht noch einmal ausversehen
                     deklariert werden.
@@ -113,23 +84,17 @@
             </section>
             <section>
                 <h4>Beispielcode 4:</h4>
-                <div class="code">
-                    <code>
-                        <p><span class="keyword">let</span> x = <span class="value">"John Doe"</span>;</p>
-                        <p><span class="keyword">let</span> x = <span class="value">0</span>;</p>
-                        <p>console.log(x);</p>
-                    </code>
+                <div class="code" style="height: 150px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t01-04&outlines=3" frameborder="0"
+                        style="height: 100%;"></iframe>
                 </div>
-                <small>Output: <code>SyntaxError: 'x' has already been declared</code></small>
+                <small>Output: <code>SyntaxError: redeclaration of let x</code></small>
             </section>
             <section>
                 <h4>Beispielcode 5:</h4>
-                <div class="code">
-                    <code>
-                        <p><span class="keyword">var</span> x = <span class="value">"John Doe"</span>;</p>
-                        <p><span class="keyword">var</span> x = <span class="value">0</span>;</p>
-                        <p>console.log(x);</p>
-                    </code>
+                <div class="code" style="height: 150px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t01-05&outlines=3" frameborder="0"
+                        style="height: 100%;"></iframe>
                 </div>
                 <small>Output: 0</small>
             </section>
@@ -142,40 +107,25 @@
             </section>
             <section>
                 <h4>Beispielcode 6:</h4>
-                <div class="code">
-                    <code>
-                        <p><span class="keyword">var</span> x = <span class="value">10</span>;</p>
-                        <p>{</p>
-                        <p class="indent"><span class="keyword">var</span> x = <span class="value">12</span>;</p>
-                        <p>}</p>
-                        <p>console.log(x);</p>
-                    </code>
+                <div class="code" style="height: 150px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t01-06&outlines=3" frameborder="0"
+                        style="height: 100%;"></iframe>
                 </div>
                 <small>Output: 12</small>
             </section>
             <section>
                 <h4>Beispielcode 7:</h4>
-                <div class="code">
-                    <code>
-                        <p><span class="keyword">let</span> x = <span class="value">10</span>;</p>
-                        <p>{</p>
-                        <p class="indent"><span class="keyword">let</span> x = <span class="value">12</span>;</p>
-                        <p>}</p>
-                        <p>console.log(x);</p>
-                    </code>
+                <div class="code" style="height: 150px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t01-07&outlines=3" frameborder="0"
+                        style="height: 100%;"></iframe>
                 </div>
                 <small>Output: 10</small>
             </section>
             <section>
                 <h4>Beispielcode 8:</h4>
-                <div class="code">
-                    <code>
-                        <p><span class="keyword">let</span> x = <span class="value">10</span>;</p>
-                        <p>{</p>
-                        <p class="indent"><span class="keyword">let</span> x = <span class="value">12</span>;</p>
-                        <p class="indent">console.log(x);</p>
-                        <p>}</p>
-                    </code>
+                <div class="code" style="height: 150px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t01-08&outlines=3" frameborder="0"
+                        style="height: 100%;"></iframe>
                 </div>
                 <small>Output: 12</small>
             </section>
@@ -188,28 +138,47 @@
             </section>
             <section>
                 <h4>Beispielcode 9:</h4>
-                <div class="code">
-                    <code>
-                        <p><span class="keyword">const</span> x = <span class="value">9</span>;</p>
-                        <p>x = <span class="value">7</span>;</p>
-                        <p>console.log(x);</p>
-                    </code>
+                <div class="code" style="height: 150px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t01-09&outlines=3" frameborder="0"
+                        style="height: 100%;"></iframe>
                 </div>
-                <small>Output: <code>Uncaught TypeError: Assignment to constant variable.</code></small>
+                <small>Output: <code>TypeError: invalid assignment to const 'x'.</code></small>
             </section>
             <section>
                 <h4>Beispielcode 10:</h4>
-                <div class="code">
-                    <code>
-                        <p><span class="keyword">const</span> x;</p>
-                        <p>x = <span class="value">7</span>;</p>
-                        <p>console.log(x);</p>
-                    </code>
+                <div class="code" style="height: 150px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t01-10&outlines=3" frameborder="0"
+                        style="height: 100%;"></iframe>
                 </div>
-                <small>Output: <code>Uncaught SyntaxError: Missing initializer in const declaration</code></small>
+                <small>Output: <code>SyntaxError: missing = in const declaration</code></small>
             </section>
         </article>
     </main>
+    <menu id="menu">
+        <h1>Men&uuml;</h1>
+        <div id="mobilemenuexit" onclick="document.getElementById('menu').classList.toggle('mobileshow')" href="javascript:void(0);"><p>&#11198;</p></div>
+        <ul>
+            <li><a href="/index.html">HOME</a></li>
+            <li>
+                <a href="javascript:void(0);"
+                    onclick="document.getElementById('tutorials-submenu').classList.toggle('show');">TUTORIALS</a>
+                <ol id="tutorials-submenu" class="show">
+                    <li><a href="/tutorials/01_introduction.html"> - Einf&uuml;hrung</a></li>
+                    <li id="currentpagebtn"><a href="/tutorials/02_variables.html"> - Variablen</a></li>
+                    <li><a href="/tutorials/03_operators.html"> - Operatoren</a></li>
+                    <li><a href="/tutorials/04_if_else.html"> - If-Else</a></li>
+                    <li><a href="/tutorials/05_for_loop.html"> - For-Loop</a></li>
+                    <li><a href="/tutorials/06_while_loop.html"> - While-Loop</a></li>
+                    <li><a href="/tutorials/07_functions.html"> - Funktionen</a></li>
+                    <li><a href="/tutorials/08_objects.html"> - Objekte</a></li>
+                    <li><a href="/utorials/09_arrays.html"> - Arrays</a></li>
+                    <li><a href="/tutorials/10_strings.html"> - Strings</a></li>
+                </ol>
+            </li>
+            <li><a href="/run_online.html">RUN CODE</a></li>
+            <li><a href="/imprint.html">IMPRESSUM</a></li>
+        </ul>
+    </menu>
 </body>
 
 </html>

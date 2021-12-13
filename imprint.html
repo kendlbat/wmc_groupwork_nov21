@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de-AT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="{{site.baseurl}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;600&family=Open+Sans:wght@300;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <title>Impressum</title>
+</head>
+
+<body>
+    <h1 id="noloadwarn" style="font-size: xx-large;">Es gab einen Fehler beim Laden des Stylesheets!<br>Versuche die Seite erneut zu laden!</h1>
+    <header>
+        <div class="mobileonly" onclick="document.getElementById('menu').classList.toggle('mobileshow')" href="javascript:void(0);">
+            <div class="imgbox" id="menubtn">
+                <img src="/assets/menu.svg" alt="Menu">
+            </div>
+        </div>
+        <h1>JavaScript Tutorials</h1>
+    </header>
+    <main>  
+        <article>
+            <section>
+                <h2>Impressum</h2>
+                <p>Hier finden Sie Links zu unseren Social-Media Kanälen sowie Kontaktdaten.</p>
+                <section>
+                    <h3>Noah Arsi&cacute;</h3>
+                    <p>Ich bin ein 16 Jahre alter Sch&uuml;ler und besuche derzeit die HTBLuVA Villach.</p>
+                    <p>Sie k&ouml;nnen mich finden unter: 
+                        <ul>
+                            <li><a href="mailto:noah.arsic@edu.htl-villach.at">noah.arsic@edu.htl-villach.at</a></li>
+                            <li><a href="https://github.com/Noahgamerrr">GitHub (Noahgamerrr)</a></li>
+                        </ul>
+                    </p>
+                </section>
+                <section>
+                    <h3>Tobias Kendlbacher</h3>
+                    <p>Ich bin ein 15 Jahre alter Sch&uuml;ler und besuche derzeit die HTBLuVA Villach.</p>
+                    <p>Sie k&ouml;nnen mich finden unter:
+                        <ul>
+                            <li><a href="mailto:kendlbat@edu.htl-villach.at">kendlbat@edu.htl-villach.at</a></li>
+                            <li><a href="https://github.com/kendlbat">GitHub (kendlbat)</a></li>
+                        </ul>
+                    </p>
+                </section>
+            </section>
+        </article>
+    </main>
+    <menu id="menu">
+        <h1>Men&uuml;</h1>
+        <div id="mobilemenuexit" onclick="document.getElementById('menu').classList.toggle('mobileshow')" href="javascript:void(0);"><p>&#11198;</p></div>
+        <ul>
+            <li><a href="/index.html">HOME</a></li>
+            <li>
+                <a href="javascript:void(0);" onclick="document.getElementById('tutorials-submenu').classList.toggle('show');">TUTORIALS</a>
+                <ul id="tutorials-submenu">
+                    <li><a href="/tutorials/01_introduction.html">01 - Einf&uuml;hrung</a></li>
+                    <li><a href="/tutorials/02_variables.html">02 - Variablen</a></li>
+                    <li><a href="/tutorials/03_operators.html">03 - Operatoren</a></li>
+                    <li><a href="/tutorials/04_if_else.html">04 - If-Else</a></li>
+                    <li><a href="/tutorials/05_for_loop.html">05 - For-Loop</a></li>
+                    <li><a href="/tutorials/06_while_loop.html">06 - While-Loop</a></li>
+                    <li><a href="/tutorials/07_functions.html">07 - Functionen</a></li>
+                    <li><a href="/tutorials/08_objects.html">08 - Objekte</a></li>
+                    <li><a href="/tutorials/09_arrays.html">09 - Arrays</a></li>
+                    <li><a href="/tutorials/10_strings.html">10 - Strings</a></li>
+                </ul>
+            </li>
+            <li><a href="/run_online.html">RUN CODE</a></li>
+            <li id="currentpagebtn"><a href="/imprint.html">IMPRESSUM</a></li>
+        </ul>
+    </menu>
+</body>
+
+</html>

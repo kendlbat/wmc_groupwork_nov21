@@ -115,3 +115,26 @@ function parseParams() {
 
 parseParams();
 document.getElementById("runbtn").onclick = runJavascriptInTextblock;
+
+document.getElementById("codeinput").onkeydown = function(e) {
+    if (e.key == "Tab") {
+        e.preventDefault();
+        var start = this.selectionStart;
+        var end = this.selectionEnd;
+
+        this.value = this.value.substring(0, start) + "    " + this.value.substring(end);
+        this.selectionStart = this.selectionEnd = start + 4;
+    }
+
+    if (e.key == "Backspace") {
+        var start = this.selectionStart;
+        var end = this.selectionEnd;
+
+        if (start == end) {
+            if (this.value.substring(start - 4, start) == "    ") {
+                this.value = this.value.substring(0, start - 4) + this.value.substring(end);
+                this.selectionStart = this.selectionEnd = start - 4;
+            }
+        }
+    }
+}

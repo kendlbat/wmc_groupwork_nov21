@@ -104,3 +104,7 @@ body.embed {
 #file-loader {
     display: none;
 }
+
+#codeinput {
+    font-family: "Roboto Mono", monospace;
+}

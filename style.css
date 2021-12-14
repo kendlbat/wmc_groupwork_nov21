@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: white;
     font-family: "Hind Siliguri", sans-serif;
@@ -129,8 +133,8 @@ th, td {
         box-sizing: border-box;
         position: fixed;
         padding: 1% 0px;
-        width: 15%;
-        max-width: 15%;
+        width: 195px;
+        max-width: 195px;
         min-width: 195px;
         min-height: 100%;
         top: 0px;
@@ -146,10 +150,9 @@ th, td {
     
     main {
         box-sizing: border-box;
-        position: absolute;
-        left: 15%;
-        min-width: 84%;
-        max-width: 84%;
+        position: fixed;
+        left: 200px;
+        max-width: calc(100% - 205px);
         width: 85%;
         overflow-x: hidden;
         margin: 0px 1% 0px;

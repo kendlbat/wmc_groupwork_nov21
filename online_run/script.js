@@ -111,6 +111,11 @@ function parseParams() {
     if (outlines != null) {
         outmax = parseInt(outlines);
     }
+
+    var disabled = urlParams.get('disabled');
+    if (disabled == "1" || disabled == "true") {
+        document.getElementById('codeinput').disabled = true;
+    }
 }
 
 parseParams();

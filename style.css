@@ -179,6 +179,11 @@ th, td {
         margin-left: 5%;
     }
 
+    menu > ul {
+        position: fixed;
+        top: 90px;
+    }
+
     /*Parent of #menubtn*/
     #menubtn {
         border: 1px solid black;
@@ -250,11 +255,7 @@ th, td {
 }
 
 @media print {
-    header {
-        display: none;
-    }
-
-    menu {
+    header, menu {
         display: none;
     }
 

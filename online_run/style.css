@@ -108,3 +108,9 @@ body.embed {
 #codeinput {
     font-family: "Roboto Mono", monospace;
 }
+
+@media print {
+    #options {
+        display: none;
+    }
+}

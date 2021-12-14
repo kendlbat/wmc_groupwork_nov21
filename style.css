@@ -150,7 +150,7 @@ th, td {
     
     main {
         box-sizing: border-box;
-        position: fixed;
+        position: absolute;
         left: 200px;
         max-width: calc(100% - 205px);
         width: 85%;

@@ -1,6 +1,7 @@
 body * {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 body.embed {
@@ -17,38 +18,30 @@ body.embed {
 
 #fileoptions {
     display: flex;
+    flex-direction: row;
+    gap: 2px;
 }
 
-#fileoptions input {
+#options {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+#fileoptions input, #runoptions button {
     font-size: x-large;
+}
+
+#runoptions {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
 }
 
 #codeindiv {
     height: 82vh;
     width: 100%;
     overflow: hidden;
-}
-
-#runbtn {
-    display: block;
-    min-height: 1.5em;
-    float: left;
-    width: 50%;
-    height: 5vh;
-    margin-bottom: 1px;
-    border-radius: 3px;
-    border: 1px solid #888;
-}
-
-#outbtn {
-    display: block;
-    float: right;
-    height: 5vh;
-    min-height: 1.5em;
-    margin-bottom: 1px;
-    border-radius: 3px;
-    border: 1px solid #888;
-    width: 50%;
 }
 
 #output:not(.shown) {
@@ -60,8 +53,25 @@ body.embed {
     height: 20vh;
 }
 
+#runoptions button {
+    border: 1px solid #888;
+    border-radius: 4px;
+}
+
+#runbtn > span > img {
+    aspect-ratio: 1;
+    height: 100%;
+}
+
+#runbtn > span {
+    display: block;
+    height: 1em;
+    width: 1em;
+}
+
 #runbtn:hover, #outbtn:hover {
     border: 1px solid #666;
+    border-radius: 4px;
 }
 
 #codeinput {

@@ -66,7 +66,7 @@ body.embed {
 #runbtn > span {
     display: block;
     height: 1em;
-    width: 1em;
+    width: 1.3em;
 }
 
 #runbtn:hover, #outbtn:hover {
@@ -103,4 +103,20 @@ body.embed {
 
 #file-loader {
     display: none;
+}
+
+#codeinput {
+    font-family: "Roboto Mono", monospace;
+}
+
+@media screen and (max-width: 600px) {
+    #options button, #options input {
+        font-size: 35pt;
+    }
+}
+
+@media print {
+    #options {
+        display: none;
+    }
 }

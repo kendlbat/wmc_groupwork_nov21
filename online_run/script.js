@@ -56,7 +56,7 @@ function loadFile() {
 
         reader.onload = function(e) {
             var textblock = document.getElementById('codeinput');
-            textblock.value = e.target.result.trimStart();
+            textblock.value = e.target.result.trimStart().replace(/\t/g, "    ");
         }
 
         reader.readAsText(file);
@@ -111,7 +111,35 @@ function parseParams() {
     if (outlines != null) {
         outmax = parseInt(outlines);
     }
+
+    var disabled = urlParams.get('disabled');
+    if (disabled == "1" || disabled == "true") {
+        document.getElementById('codeinput').disabled = true;
+    }
 }
 
 parseParams();
 document.getElementById("runbtn").onclick = runJavascriptInTextblock;
+
+document.getElementById("codeinput").onkeydown = function(e) {
+    if (e.key == "Tab") {
+        e.preventDefault();
+        var start = this.selectionStart;
+        var end = this.selectionEnd;
+
+        this.value = this.value.substring(0, start) + "    " + this.value.substring(end);
+        this.selectionStart = this.selectionEnd = start + 4;
+    }
+
+    if (e.key == "Backspace") {
+        var start = this.selectionStart;
+        var end = this.selectionEnd;
+
+        if (start == end) {
+            if (this.value.substring(start - 4, start) == "    ") {
+                this.value = this.value.substring(0, start - 4) + this.value.substring(end);
+                this.selectionStart = this.selectionEnd = start - 4;
+            }
+        }
+    }
+}

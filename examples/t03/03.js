@@ -1,0 +1,10 @@
+var var1 = 5 + 5;
+var var2 = "5" + 5;
+var var3 = 5 + "5";
+var var4 = "Hello" + 5;
+var var5 = 5 + "Hello";
+console.log(var1);
+console.log(var2);
+console.log(var3);
+console.log(var4);
+console.log(var5);

@@ -56,7 +56,7 @@ function loadFile() {
 
         reader.onload = function(e) {
             var textblock = document.getElementById('codeinput');
-            textblock.value = e.target.result.trimStart();
+            textblock.value = e.target.result.trimStart().replace(/\t/g, "    ");
         }
 
         reader.readAsText(file);

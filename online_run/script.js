@@ -2,6 +2,12 @@ var output = [];
 var outputs = 0;
 var outmax = 7;
 
+var autobrackets = localStorage.getItem("autobrackets");
+if (autobrackets == null) {
+    autobrackets = "true";
+}
+localStorage.setItem("autobrackets", autobrackets)
+
 console.log("SCRIPT LOADED");
 
 async function execJSText() {
@@ -154,6 +160,88 @@ document.getElementById("codeinput").onkeydown = function (e) {
                 this.value = this.value.substring(0, start - 4) + this.value.substring(end);
                 this.selectionStart = this.selectionEnd = start - 4;
             }
+        }
+
+        // If the user has removed a { and there is a } after it, remove the }
+        if (this.value.substring(start - 1, start) == "{" && this.value.substring(end, end + 1) == "}") {
+            this.value = this.value.substring(0, start - 1) + this.value.substring(end + 1);
+            this.selectionStart = this.selectionEnd = start - 1;
+        }
+
+        // If the user has removed a ( and there is a ) after it, remove the )
+        if (this.value.substring(start - 1, start) == "(" && this.value.substring(end, end + 1) == ")") {
+            this.value = this.value.substring(0, start - 1) + this.value.substring(end + 1);
+            this.selectionStart = this.selectionEnd = start - 1;
+        }
+
+        // If the user has removed a [ and there is a ] after it, remove the ]
+        if (this.value.substring(start - 1, start) == "[" && this.value.substring(end, end + 1) == "]") {
+            this.value = this.value.substring(0, start - 1) + this.value.substring(end + 1);
+            this.selectionStart = this.selectionEnd = start - 1;
+        }
+
+        // If the user has removed a " and there is a " after it, remove the "
+        if (this.value.substring(start - 1, start) == "\"" && this.value.substring(end, end + 1) == "\"") {
+            this.value = this.value.substring(0, start - 1) + this.value.substring(end + 1);
+            this.selectionStart = this.selectionEnd = start - 1;
+        }
+
+        // If the user has removed a ' and there is a ' after it, remove the '
+        if (this.value.substring(start - 1, start) == "'" && this.value.substring(end, end + 1) == "'") {
+            this.value = this.value.substring(0, start - 1) + this.value.substring(end + 1);
+            this.selectionStart = this.selectionEnd = start - 1;
+        }
+    }
+
+    if (autobrackets == "true") {
+        // when { is pressed, insert } after the cursor
+        if (e.key == "{") {
+            e.preventDefault();
+            var start = this.selectionStart;
+            var end = this.selectionEnd;
+
+            this.value = this.value.substring(0, start) + "{}" + this.value.substring(end);
+            this.selectionStart = this.selectionEnd = start + 1;
+        }
+
+        // when ( is pressed, insert ) after the cursor
+        if (e.key == "(") {
+            e.preventDefault();
+            var start = this.selectionStart;
+            var end = this.selectionEnd;
+
+            this.value = this.value.substring(0, start) + "()" + this.value.substring(end);
+            this.selectionStart = this.selectionEnd = start + 1;
+        }
+
+        // when [ is pressed, insert ] after the cursor
+        if (e.key == "[") {
+            e.preventDefault();
+            var start = this.selectionStart;
+            var end = this.selectionEnd;
+
+            this.value = this.value.substring(0, start) + "[]" + this.value.substring(end);
+            this.selectionStart = this.selectionEnd = start + 1;
+        }
+
+        // when " is pressed, insert " after the cursor
+        if (e.key == "\"") {
+            e.preventDefault();
+            var start = this.selectionStart;
+            var end = this.selectionEnd;
+
+            this.value = this.value.substring(0, start) + "\"\"" + this.value.substring(end);
+            this.selectionStart = this.selectionEnd = start + 1;
+        }
+
+        // when ' is pressed, insert ' after the cursor
+        if (e.key == "'") {
+            e.preventDefault();
+            var start = this.selectionStart;
+            var end = this.selectionEnd;
+
+            this.value = this.value.substring(0, start) + "''" + this.value.substring(end);
+            this.selectionStart = this.selectionEnd = start + 1;
         }
     }
 }

@@ -90,7 +90,11 @@ function parseParams() {
     var embed = urlParams.get('embed');
 
     if (embed == "true" || embed == "1") {
-        document.getElementById('fileoptions').classList.add("nodisplay");
+        var fileoptions = document.getElementsByClassName('fileoptions');
+        for (var i = 0; i < fileoptions.length; i++) {
+            fileoptions[i].classList.add("nodisplay");
+        }
+
         document.body.classList.add("embed");
     }
 
@@ -167,4 +171,10 @@ window.onload = function () {
     }
 }
 
-
+function resetTextarea() {
+    // Prompt the user to confirm
+    if (confirm("Are you sure you want to reset the code?")) {
+        document.getElementById('codeinput').value = "";
+        localStorage.removeItem("codeinput");
+    }
+}

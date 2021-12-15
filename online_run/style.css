@@ -16,7 +16,7 @@ body.embed {
     display: none;
 }
 
-#fileoptions {
+.fileoptions {
     display: flex;
     flex-direction: row;
     gap: 2px;
@@ -28,7 +28,7 @@ body.embed {
     gap: 2px;
 }
 
-#fileoptions input, #runoptions button {
+.fileoptions input, .fileoptions button, #runoptions button {
     font-size: x-large;
 }
 

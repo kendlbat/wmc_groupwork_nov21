@@ -23,7 +23,7 @@ function runJavascriptInTextblock() {
 }
 
 // value has to be string
-function RES_printValue(value) {	
+function RES_printValue(value) {
     // Append value to output array
     // Update outputtext innerText
     // Print the number of times this function has been called so far on the left of the lines
@@ -40,6 +40,7 @@ function RES_printValue(value) {
     if (!outputdiv.classList.contains("shown")) {
         outputdiv.classList.add("shown");
     }
+    outputdiv.scrollTop = outputdiv.scrollHeight;
 
     outputtext.innerText = output.join("\n");
 
@@ -50,11 +51,11 @@ function loadFile() {
     var fileinput = document.getElementById('file-loader');
     fileinput.click();
 
-    fileinput.onchange = function() {
+    fileinput.onchange = function () {
         var file = fileinput.files[0];
         var reader = new FileReader();
 
-        reader.onload = function(e) {
+        reader.onload = function (e) {
             var textblock = document.getElementById('codeinput');
             textblock.value = e.target.result.trimStart().replace(/\t/g, "    ");
         }
@@ -97,7 +98,7 @@ function parseParams() {
     if (filename != null) {
         filename = filename.replace("-", "/") + ".js";
         var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
+        xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 var textblock = document.getElementById('codeinput');
                 textblock.value = this.responseText.trimStart();
@@ -118,10 +119,19 @@ function parseParams() {
     }
 }
 
+function showOutput() {
+    document.getElementById('output').classList.toggle('shown');
+    // if the output is shown, scroll to the bottom
+    if (document.getElementById('output').classList.contains("shown")) {
+        document.getElementById('outputtext').scrollTop = document.getElementById('outputtext').scrollHeight;
+    }
+
+}
+
 parseParams();
 document.getElementById("runbtn").onclick = runJavascriptInTextblock;
 
-document.getElementById("codeinput").onkeydown = function(e) {
+document.getElementById("codeinput").onkeydown = function (e) {
     if (e.key == "Tab") {
         e.preventDefault();
         var start = this.selectionStart;
@@ -143,3 +153,18 @@ document.getElementById("codeinput").onkeydown = function(e) {
         }
     }
 }
+
+window.onbeforeunload = function () {
+    var textblock = document.getElementById('codeinput');
+    localStorage.setItem("codeinput", textblock.value);
+}
+
+// when the page is loaded, load the code from the local storage
+window.onload = function () {
+    var codeinput = localStorage.getItem("codeinput");
+    if (codeinput != null) {
+        document.getElementById('codeinput').value = codeinput;
+    }
+}
+
+

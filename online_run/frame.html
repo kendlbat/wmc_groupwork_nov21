@@ -20,13 +20,14 @@
             </div>
             <div id="runoptions">
                 <button id="runbtn" title="Run your code" href="javascript:void(0)"><span><img src="/assets/play_btn.svg" id="runbtnimg"></span></button>
-                <button id="outbtn" title="Show the console" onclick="document.getElementById('output').classList.toggle('shown')" href="javascript:void(0)">&#128196;</button>
+                <button id="outbtn" title="Show the console" onclick="showOutput();" href="javascript:void(0)">&#128196;</button>
             </div>
         </div>
     </header>
     <div id="output">
         <p><b>Output:</b></p>
         <p id="outputtext"></p>
+        <p id="a" style="visibility: hidden;"></p>
     </div>
     <div id="codeindiv">
         <textarea rows="5" id="codeinput" placeholder="Type your code here..."></textarea>

@@ -50,7 +50,7 @@ body.embed {
 
 #output.shown {
     display: block;
-    height: 20vh;
+    height: max-content;
 }
 
 #runoptions button {
@@ -94,7 +94,7 @@ body.embed {
     max-height: 12.5rem;
     border: 1px solid #888;
     border-radius: 3px;
-    overflow: hidden;
+    overflow-y: scroll;
 }
 
 #output:hover {

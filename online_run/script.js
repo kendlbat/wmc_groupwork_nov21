@@ -25,6 +25,7 @@ async function execJSText() {
 }
 
 function runJavascriptInTextblock() {
+    // This functions purpose is to keep the button from loading indefinitely, as it would normally wait for execution to finish
     execJSText();
 }
 

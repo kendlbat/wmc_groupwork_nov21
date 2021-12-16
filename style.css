@@ -71,6 +71,15 @@ menu ol {
     color: green;
 }
 
+#indent {
+    margin-left: 8px;
+}
+
+#indent::before {
+    content: "Output: ";
+    visibility: hidden;
+}
+
 a {
     text-decoration: none;
     color: #0066ff;
@@ -182,6 +191,10 @@ th, td {
     menu > ul {
         position: fixed;
         top: 90px;
+    }
+
+    #indent {
+        margin-left: 5px;
     }
 
     /*Parent of #menubtn*/

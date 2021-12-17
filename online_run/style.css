@@ -16,7 +16,7 @@ body.embed {
     display: none;
 }
 
-#fileoptions {
+.fileoptions {
     display: flex;
     flex-direction: row;
     gap: 2px;
@@ -28,8 +28,8 @@ body.embed {
     gap: 2px;
 }
 
-#fileoptions input, #runoptions button {
-    font-size: x-large;
+.fileoptions input, .fileoptions button, #runoptions button {
+    font-size: 26pt;
 }
 
 #runoptions {
@@ -50,7 +50,7 @@ body.embed {
 
 #output.shown {
     display: block;
-    height: 20vh;
+    height: max-content;
 }
 
 #runoptions button {
@@ -94,7 +94,7 @@ body.embed {
     max-height: 12.5rem;
     border: 1px solid #888;
     border-radius: 3px;
-    overflow: hidden;
+    overflow-y: scroll;
 }
 
 #output:hover {

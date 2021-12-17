@@ -2,6 +2,12 @@ var output = [];
 var outputs = 0;
 var outmax = 7;
 
+var autobrackets = localStorage.getItem("autobrackets");
+if (autobrackets == null) {
+    autobrackets = "true";
+}
+localStorage.setItem("autobrackets", autobrackets)
+
 console.log("SCRIPT LOADED");
 
 async function execJSText() {
@@ -19,11 +25,12 @@ async function execJSText() {
 }
 
 function runJavascriptInTextblock() {
+    // This functions purpose is to keep the button from loading indefinitely, as it would normally wait for execution to finish
     execJSText();
 }
 
 // value has to be string
-function RES_printValue(value) {	
+function RES_printValue(value) {
     // Append value to output array
     // Update outputtext innerText
     // Print the number of times this function has been called so far on the left of the lines
@@ -40,6 +47,7 @@ function RES_printValue(value) {
     if (!outputdiv.classList.contains("shown")) {
         outputdiv.classList.add("shown");
     }
+    outputdiv.scrollTop = outputdiv.scrollHeight;
 
     outputtext.innerText = output.join("\n");
 
@@ -50,11 +58,11 @@ function loadFile() {
     var fileinput = document.getElementById('file-loader');
     fileinput.click();
 
-    fileinput.onchange = function() {
+    fileinput.onchange = function () {
         var file = fileinput.files[0];
         var reader = new FileReader();
 
-        reader.onload = function(e) {
+        reader.onload = function (e) {
             var textblock = document.getElementById('codeinput');
             textblock.value = e.target.result.trimStart().replace(/\t/g, "    ");
         }
@@ -89,7 +97,11 @@ function parseParams() {
     var embed = urlParams.get('embed');
 
     if (embed == "true" || embed == "1") {
-        document.getElementById('fileoptions').classList.add("nodisplay");
+        var fileoptions = document.getElementsByClassName('fileoptions');
+        for (var i = 0; i < fileoptions.length; i++) {
+            fileoptions[i].classList.add("nodisplay");
+        }
+
         document.body.classList.add("embed");
     }
 
@@ -97,7 +109,7 @@ function parseParams() {
     if (filename != null) {
         filename = filename.replace("-", "/") + ".js";
         var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
+        xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 var textblock = document.getElementById('codeinput');
                 textblock.value = this.responseText.trimStart();
@@ -118,10 +130,19 @@ function parseParams() {
     }
 }
 
+function showOutput() {
+    document.getElementById('output').classList.toggle('shown');
+    // if the output is shown, scroll to the bottom
+    if (document.getElementById('output').classList.contains("shown")) {
+        document.getElementById('outputtext').scrollTop = document.getElementById('outputtext').scrollHeight;
+    }
+
+}
+
 parseParams();
 document.getElementById("runbtn").onclick = runJavascriptInTextblock;
 
-document.getElementById("codeinput").onkeydown = function(e) {
+document.getElementById("codeinput").onkeydown = function (e) {
     if (e.key == "Tab") {
         e.preventDefault();
         var start = this.selectionStart;
@@ -141,5 +162,108 @@ document.getElementById("codeinput").onkeydown = function(e) {
                 this.selectionStart = this.selectionEnd = start - 4;
             }
         }
+
+        // If the user has removed a { and there is a } after it, remove the }
+        if (this.value.substring(start - 1, start) == "{" && this.value.substring(end, end + 1) == "}") {
+            this.value = this.value.substring(0, start - 1) + this.value.substring(end + 1);
+            this.selectionStart = this.selectionEnd = start - 1;
+        }
+
+        // If the user has removed a ( and there is a ) after it, remove the )
+        if (this.value.substring(start - 1, start) == "(" && this.value.substring(end, end + 1) == ")") {
+            this.value = this.value.substring(0, start - 1) + this.value.substring(end + 1);
+            this.selectionStart = this.selectionEnd = start - 1;
+        }
+
+        // If the user has removed a [ and there is a ] after it, remove the ]
+        if (this.value.substring(start - 1, start) == "[" && this.value.substring(end, end + 1) == "]") {
+            this.value = this.value.substring(0, start - 1) + this.value.substring(end + 1);
+            this.selectionStart = this.selectionEnd = start - 1;
+        }
+
+        // If the user has removed a " and there is a " after it, remove the "
+        if (this.value.substring(start - 1, start) == "\"" && this.value.substring(end, end + 1) == "\"") {
+            this.value = this.value.substring(0, start - 1) + this.value.substring(end + 1);
+            this.selectionStart = this.selectionEnd = start - 1;
+        }
+
+        // If the user has removed a ' and there is a ' after it, remove the '
+        if (this.value.substring(start - 1, start) == "'" && this.value.substring(end, end + 1) == "'") {
+            this.value = this.value.substring(0, start - 1) + this.value.substring(end + 1);
+            this.selectionStart = this.selectionEnd = start - 1;
+        }
+    }
+
+    if (autobrackets == "true") {
+        // when { is pressed, insert } after the cursor
+        if (e.key == "{") {
+            e.preventDefault();
+            var start = this.selectionStart;
+            var end = this.selectionEnd;
+
+            this.value = this.value.substring(0, start) + "{}" + this.value.substring(end);
+            this.selectionStart = this.selectionEnd = start + 1;
+        }
+
+        // when ( is pressed, insert ) after the cursor
+        if (e.key == "(") {
+            e.preventDefault();
+            var start = this.selectionStart;
+            var end = this.selectionEnd;
+
+            this.value = this.value.substring(0, start) + "()" + this.value.substring(end);
+            this.selectionStart = this.selectionEnd = start + 1;
+        }
+
+        // when [ is pressed, insert ] after the cursor
+        if (e.key == "[") {
+            e.preventDefault();
+            var start = this.selectionStart;
+            var end = this.selectionEnd;
+
+            this.value = this.value.substring(0, start) + "[]" + this.value.substring(end);
+            this.selectionStart = this.selectionEnd = start + 1;
+        }
+
+        // when " is pressed, insert " after the cursor
+        if (e.key == "\"") {
+            e.preventDefault();
+            var start = this.selectionStart;
+            var end = this.selectionEnd;
+
+            this.value = this.value.substring(0, start) + "\"\"" + this.value.substring(end);
+            this.selectionStart = this.selectionEnd = start + 1;
+        }
+
+        // when ' is pressed, insert ' after the cursor
+        if (e.key == "'") {
+            e.preventDefault();
+            var start = this.selectionStart;
+            var end = this.selectionEnd;
+
+            this.value = this.value.substring(0, start) + "''" + this.value.substring(end);
+            this.selectionStart = this.selectionEnd = start + 1;
+        }
+    }
+}
+
+window.onbeforeunload = function () {
+    var textblock = document.getElementById('codeinput');
+    localStorage.setItem("codeinput", textblock.value);
+}
+
+// when the page is loaded, load the code from the local storage
+window.onload = function () {
+    var codeinput = localStorage.getItem("codeinput");
+    if (codeinput != null) {
+        document.getElementById('codeinput').value = codeinput;
+    }
+}
+
+function resetTextarea() {
+    // Prompt the user to confirm
+    if (confirm("Are you sure you want to reset the code?")) {
+        document.getElementById('codeinput').value = "";
+        localStorage.removeItem("codeinput");
     }
 }

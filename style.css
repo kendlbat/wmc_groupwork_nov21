@@ -11,6 +11,10 @@ body {
     width: 100%;
 }
 
+.decorated {
+    list-style: disc;
+}
+
 #noloadwarn {
     display: none;
 }

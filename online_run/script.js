@@ -142,6 +142,13 @@ function showOutput() {
 parseParams();
 document.getElementById("runbtn").onclick = runJavascriptInTextblock;
 
+document.body.onkeydown = function (e) {
+    if (e.ctrlKey && e.key == "s") {
+        e.preventDefault()
+        saveFile()
+    }
+}
+
 document.getElementById("codeinput").onkeydown = function (e) {
     if (e.key == "Tab") {
         e.preventDefault();

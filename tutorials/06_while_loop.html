@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For-Loop</title>
+    <title>While-Loop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -25,58 +25,42 @@
     <main>
         <article>
             <section>
-                <h2>For-Loop</h2>
-                <p>Wie in anderen Programmiersprachen gibt es auch in JavaScript sogenannte Loops: Ein Code-Block, 
-                    welcher eine bestimmte oder unbestimmte Anzahl an Anl&auml;ufen durchgeht. Diese "Loops" w&auml;ren:
-                </p>
-                <ul class="decorated">
-                    <li>For-Loop</li>
-                    <li>While-Loop</li>
-                </ul>
-                <p>In diesem Tutorial aber soll es um die "For-Loop" gehen.</p>
+                <h2>While-Loop</h2>
+                <p>Die While-Schleife ist eine Schleife, welche eine unbestimmte Anzahl an Anl&auml;ufen durchgeht. 
+                    Ein Beispiel f&uuml;r eine While-Schleife sieht so aus.</p>
             </section>
             <section>
-                <p>Ein Beispielcode für eine For-Loop sieht zum Beispiel so aus:</p>
                 <h4>Beispielcode 1: </h4>
                 <div class="code">
-                    <iframe src="/online_run/frame.html?embed=1&file=t05-01&outlines=3&disabled=1" frameborder="0"
+                    <iframe src="/online_run/frame.html?embed=1&file=t06-01&outlines=3&disabled=1" frameborder="0"
                         style="height: 100%;"></iframe>
                 </div>
                 <small>Output: Alle Zahlen von 0 bis 9</small>
             </section>
             <section>
-                <p>Eine For-Loop besteht grunds&auml;tzlich aus drei Bedingungen.</p>
-                <h3>Die 1. Bedingung:</h3>
-                <p>initialisiert einen Wert f&uuml;r die For-Schleife.Man kann aber auch vorher eine Variable initialisieren und ihr einen Wert zuschreiben, um diese
-                    dann f&uuml;r eine die For-Loop zu verwenden.
+                <p>Dabei ist der Code innerhalb der runden Klammer <code>(//condition)</code> die Bedingung, die am Anfang oder nach einem
+                    Ablauf abgerufen wird, um zu bestimmen, ob noch ein Ablauf durchgegangen werden soll. (Der Code innerhalb der
+                    geschwungenen Klammern)
                 </p>
+            </section>
+            <section>
+                <h2>Do-While-Loop</h2>
+                <p>Die do-while-Schleife ist vom Aufbau und von der Funktionalit&auml;t sehr &auml;hnlich zur While-Schleife.
+                    Diese sieht zum Beispiel so aus:
+                </p>
+            </section>
+            <section>
                 <h4>Beispielcode 2: </h4>
                 <div class="code">
-                    <iframe src="/online_run/frame.html?embed=1&file=t05-02&outlines=3&disabled=1" frameborder="0"
+                    <iframe src="/online_run/frame.html?embed=1&file=t06-02&outlines=3&disabled=1" frameborder="0"
                         style="height: 100%;"></iframe>
                 </div>
-                <small>Output: Alle Zahlen von 2 bis 9</small>
+                <small>Output: Alle Zahlen von 0 bis 9</small>
             </section>
             <section>
-                <h3>Die 2. Bedingung:</h3>
-                <p>Ist eine True-or-False-Aussage. Wenn die Aussage als R&uuml;ckgabewert "True" ausgibt, so wird
-                    die Schleife weitergef&uuml;hrt, ansonsten wird sie abgebrochen. Diese Bedingung ist essentiell.
-                    Wenn sie ausgelassen wird, so muss sich innerhalb der For-Schleife ein <code>break;</code> befinden,
-                    ansonsten l&auml;uft die Schleife unendlich lange, was den Browser abst&uuml;rzen l&auml;sst.
+                <p> Der einzige Unterschied besteht darin, dass die Do-While-Schleife mindestens einen Ablauf hat, w&auml;hrend
+                    die While-Schleife, wenn die Bedingung schon am Anfang <code>false</code> ausgibt, einfach &uuml;bersprungen wird.
                 </p>
-            </section>
-            <section>
-                <h3>Die 3. Bedingung</h3>
-                <p>Gibt an, was mit der Variablen passiert, nachdem die Schleife einen Ablauf gemacht hat.
-                    Oftmals ist es eine Erh&ouml;hung oder Erniedriegung der Zahl um 1. Diese Bedingung kann
-                    aber ausfallen, wenn diese Variable innerhalb der Schleife ver&auml;ndert wird.
-                </p>
-                <h4>Beispielcode 3: </h4>
-                <div class="code">
-                    <iframe src="/online_run/frame.html?embed=1&file=t05-03&outlines=3&disabled=1" frameborder="0"
-                        style="height: 100%;"></iframe>
-                </div>
-                <small>Output: Alle Zahlen von 2 bis 12</small>
             </section>
         </article>
     </main>
@@ -92,8 +76,8 @@
                     <li><a href="/tutorials/02_variables.html"> - Variablen</a></li>
                     <li><a href="/tutorials/03_operators.html"> - Operatoren</a></li>
                     <li><a href="/tutorials/04_if_else.html"> - If-Else</a></li>
-                    <li id="currentpagebtn"><a href="/tutorials/05_for_loop.html"> - For-Loop</a></li>
-                    <li><a href="/tutorials/06_while_loop.html"> - While-Loop</a></li>
+                    <li><a href="/tutorials/05_for_loop.html"> - For-Loop</a></li>
+                    <li id="currentpagebtn"><a href="/tutorials/06_while_loop.html"> - While-Loop</a></li>
                     <li><a href="/tutorials/07_functions.html"> - Funktionen</a></li>
                     <li><a href="/tutorials/08_objects.html"> - Objekte</a></li>
                     <li><a href="/utorials/09_arrays.html"> - Arrays</a></li>

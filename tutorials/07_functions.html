@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>While-Loop</title>
+    <title>Funktionen</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -25,41 +25,42 @@
     <main>
         <article>
             <section>
-                <h2>While-Loop</h2>
-                <p>Die While-Schleife ist eine Schleife, welche eine unbestimmte Anzahl an Anl&auml;ufen durchgeht. 
-                    Ein Beispiel f&uuml;r eine While-Schleife sieht so aus.</p>
+                <h2>Funktionen</h2>
+                <p>Eine Funktion ist ein Codeblock, welcher bestimmte Aufgaben erf&uuml;llt.</p>
             </section>
             <section>
                 <h4>Beispielcode 1: </h4>
-                <div class="code">
-                    <iframe src="/online_run/frame.html?embed=1&file=t06-01&outlines=3&disabled=1" frameborder="0"
+                <div class="code" style="height: 175px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t07-01&outlines=3&disabled=1" frameborder="0"
                         style="height: 100%;"></iframe>
                 </div>
-                <small>Output: Alle Zahlen von 0 bis 9</small>
+                <small>Output: <code>5</code></small>
             </section>
             <section>
-                <p>Dabei ist der Code innerhalb der runden Klammer <code>(//condition)</code> die Bedingung, die am Anfang oder nach einem
-                    Ablauf abgerufen wird, um zu bestimmen, ob noch ein Ablauf durchgegangen werden soll. (Der Code innerhalb der
-                    geschwungenen Klammern)
+                <h3>Syntax einer Funktion</h3>
+                <p>Eine Funktion wird mit dem <code>function</code> Schl&uuml;sselwort definiert, dabei werden
+                    innerhalb der runden Klammern die Parameter &uuml;bergeben, welche dann in der Funktion verwendet werden.
+                    die Funktion selber wird innerhalb der geschwungenen Klammern geschrieben
                 </p>
             </section>
             <section>
-                <h2>Do-While-Loop</h2>
-                <p>Die do-while-Schleife ist vom Aufbau und von der Funktionalit&auml;t sehr &auml;hnlich zur While-Schleife.
-                    Diese sieht zum Beispiel so aus:
+                <code>
+                    <p>function nameDerFunktion (parameter1, parameter2, ...) {</p>
+                    <p style="margin-left: 2vw;">//code</p>
+                    <p>}</p>
+                </code>
+            </section>
+            <section>
+                <p>Wenn man eine Funktion aufrufen m&ouml;chte, muss man die vorgegebenen Parameter mitgeben.
+                    Danach wird der in der Funktion enthaltene Code aufgerufen. Falls die Funktion mit <code>return</code>
+                    endet, dann wird der danach stehende Wert &uuml;bergeben, entweder an eine Variable, oder an eine andere Funktion.
                 </p>
             </section>
             <section>
-                <h4>Beispielcode 2: </h4>
-                <div class="code">
-                    <iframe src="/online_run/frame.html?embed=1&file=t06-02&outlines=3&disabled=1" frameborder="0"
-                        style="height: 100%;"></iframe>
-                </div>
-                <small>Output: Alle Zahlen von 0 bis 9</small>
-            </section>
-            <section>
-                <p> Der einzige Unterschied besteht darin, dass die Do-While-Schleife mindestens einen Ablauf hat, w&auml;hrend
-                    die While-Schleife, wenn die Bedingung schon am Anfang <code>false</code> ausgibt, einfach &uuml;bersprungen wird.
+                <h3>Warum sollte man Funktionen verwenden?</h3>
+                <p>Funktionen k&ouml;nnen wiederverwendet werden, das hei&szlig;t, dass man, wenn sich
+                    ein St&uuml;ck Code wiederholt, wird man diesen nicht etliche Male schreiben, sondern in einer
+                    Funktion auslagern, und diese Funktion dann ausrufen.
                 </p>
             </section>
         </article>
@@ -77,8 +78,8 @@
                     <li><a href="/tutorials/03_operators.html"> - Operatoren</a></li>
                     <li><a href="/tutorials/04_if_else.html"> - If-Else</a></li>
                     <li><a href="/tutorials/05_for_loop.html"> - For-Loop</a></li>
-                    <li id="currentpagebtn"><a href="/tutorials/06_while_loop.html"> - While-Loop</a></li>
-                    <li><a href="/tutorials/07_functions.html"> - Funktionen</a></li>
+                    <li><a href="/tutorials/06_while_loop.html"> - While-Loop</a></li>
+                    <li id="currentpagebtn"><a href="/tutorials/07_functions.html"> - Funktionen</a></li>
                     <li><a href="/tutorials/08_objects.html"> - Objekte</a></li>
                     <li><a href="/utorials/09_arrays.html"> - Arrays</a></li>
                     <li><a href="/tutorials/10_strings.html"> - Strings</a></li>

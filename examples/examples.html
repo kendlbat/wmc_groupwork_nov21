@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;600&family=Open+Sans:wght@300;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        * {
+            font-family: "Hind Siliguri";
+        }
+
+        body {
+            padding-left: 1%;
+        }
+
+        #main h2 {
+            position: relative;
+            left: 50px;
+            margin-bottom: -10px;
+            display: inline;
+        }
+
+        #main p {
+            display: inline;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-left: 16px;
+        }
+
+        #main {
+            position: absolute;
+            left: max(830px, calc(40% + 210px));
+            min-width: 398px;
+        }
+
+        #ideframe {
+            border: 0px;
+            height: 100%;
+            min-width: 601px;
+            width: 40%;
+            position: fixed;
+            left: 210px;
+            top: 0px;
+        }
+
+        #toosmallwarn {
+            display: none;
+        }
+
+        @media screen and (max-width: 1150px) {
+            body > *:not(.toosmall), body > *:not(.toosmall) *:not(.toosmall) {
+                display: none;
+            }
+
+            #toosmallwarn {
+                display: block;
+                position: fixed;
+                left: 50%;
+                top: 50%;
+                min-width: 80%;
+                transform: translate(-50%, -50%);
+                border-radius: 5px;
+                border: 1px solid black;
+                background-color: white;
+                padding: 10px;
+                z-index: 1;
+            }
+
+            #toosmallwarn > div > button {
+                width: 40%;
+                min-width: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="mobileonly" onclick="document.getElementById('menu').classList.toggle('mobileshow')" href="javascript:void(0);">
+            <div class="imgbox" id="menubtn">
+                <img src="/assets/menu.svg" alt="Menu">
+            </div>
+        </div>
+    </header>
+    <iframe src="/online_run/frame.html?file=specialexample" id="ideframe"></iframe>
+    <div id="main"></div>
+    <div class="toosmall" id="toosmallwarn">
+        <h2>Warning!</h2>
+        <p>
+            Your current browser is not wide enough to support this page.<br>
+            Please use a different browser or resize your browser window.
+        </p>
+        <div style="display: flex-block; gap: 10px; text-align: center; margin-top: 5px;">
+            <button href="/index.html" onclick="window.top.location = '/index.html'">HOME</button>
+            <!--When clicked should go back to the previously visited page-->
+            <button onclick="window.history.back()">BACK</button>
+        </div>
+    </div>
+    <menu id="menu" class="toosmall">
+        <h1>Men&uuml;</h1>
+        <div id="mobilemenuexit" class="mobileonly" onclick="document.getElementById('menu').classList.toggle('mobileshow')" href="javascript:void(0);"><img src="/assets/exit.svg" id="menuexitsvg"></div>
+        <ul>
+            <li><a href="/index.html">HOME</a></li>
+            <li>
+                <a href="javascript:void(0);" onclick="document.getElementById('tutorials-submenu').classList.toggle('show');">TUTORIALS</a>
+                <ol id="tutorials-submenu">
+                    <li><a href="/tutorials/01_introduction.html"> - Einf&uuml;hrung</a></li>
+                    <li><a href="/tutorials/02_variables.html"> - Variablen</a></li>
+                    <li><a href="/tutorials/03_operators.html"> - Operatoren</a></li>
+                    <li><a href="/tutorials/04_if_else.html"> - If-Else</a></li>
+                    <li><a href="/tutorials/05_for_loop.html"> - For-Loop</a></li>
+                    <li><a href="/tutorials/06_while_loop.html"> - While-Loop</a></li>
+                    <li><a href="/tutorials/07_functions.html"> - Funktionen</a></li>
+                    <li><a href="/tutorials/08_objects.html"> - Objekte</a></li>
+                    <li><a href="/tutorials/09_arrays.html"> - Arrays</a></li>
+                    <li><a href="/tutorials/10_strings.html"> - Strings</a></li>
+                </ol>
+            </li>
+            <li><a href="/run_online.html">RUN CODE</a></li>
+            <li><a href="/imprint.html">IMPRESSUM</a></li>
+            <li id="currentpagebtn"><a href="/examples/examples.html">ALLE BEISPIELE</a></li>
+        </ul>
+    </menu>
+    <script>
+        function loadFileToIDE(file) {
+            document.getElementById('ideframe').src = '/online_run/frame.html?file=' + file;
+        }
+
+        async function main() {
+            var jsondata = await fetch('/examples/examples.json');
+            jsondata = await jsondata.json();
+
+            console.log(jsondata);
+            var i = 0;
+
+            for (let element in jsondata) {
+                // let linkstring = `/examples/${element}`;
+
+                let tutdiv = document.createElement('div');
+
+                let description = document.createElement('p');
+                description.innerText = Object.values(jsondata)[i].description;
+                tutdiv.appendChild(description);
+
+                let heading = document.createElement('h2');
+                heading.innerText = Object.values(jsondata)[i].name;
+                tutdiv.appendChild(heading);
+
+                let examplelist = document.createElement('ul');
+                examplelist.style.listStyleType = "disc";
+                examplelist.style.paddingLeft = "16px";
+                examplelist.style.marginLeft = "40px";
+                examplelist.style.marginTop = "0px";
+
+                for (let example in Object.values(jsondata)[i].examples) {
+                    let exampleitem = document.createElement('li');
+                    let examplelink = document.createElement('a');
+                    examplelink.innerText = Object.values(jsondata)[i].examples[example];
+                    // USE WHEN YOU WANT THE FILE TO BE DOWNLOADED
+                    // examplelink.href = linkstring + `/${example}.js`;
+                    // examplelink.download = "";
+
+                    // USE IF YOU WANT THE IDE TO OPEN EXTERNALLY
+                    // examplelink.href = `/online_run/frame.html?file=${element}-${example}`;
+
+                    examplelink.href = "javascript:void(0);";
+                    examplelink.onclick = () => { loadFileToIDE(`${element}-${example}`); };
+                    exampleitem.appendChild(examplelink);
+                    examplelist.appendChild(exampleitem);
+                }
+
+                tutdiv.appendChild(examplelist);
+
+                document.getElementById("main").appendChild(tutdiv);
+                i++;
+            }
+        }
+
+        main();
+
+    </script>
+</body>
+</html>

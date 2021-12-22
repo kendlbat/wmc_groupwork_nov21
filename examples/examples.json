@@ -51,5 +51,12 @@
             "01": "WHILE-Schleife als Alternative zu FOR",
             "02": "DO-WHILE-Schleife als Gegenstück zu WHILE"
         }
+    },
+    "t07": {
+        "name": "Funktionen",
+        "description": "Tutorial 7",
+        "examples": {
+            "01": "Aufruf und Rückgabe einer Funktion"
+        }
     }
 }

@@ -1,6 +1,7 @@
 var output = [];
 var outputs = 0;
 var outmax = 7;
+var ignorestorage = false;
 
 var autobrackets = localStorage.getItem("autobrackets");
 if (autobrackets == null) {
@@ -107,6 +108,7 @@ function parseParams() {
 
     var filename = urlParams.get('file');
     if (filename != null) {
+        ignorestorage = true;
         filename = filename.replace("-", "/") + ".js";
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
@@ -255,15 +257,19 @@ document.getElementById("codeinput").onkeydown = function (e) {
 }
 
 window.onbeforeunload = function () {
-    var textblock = document.getElementById('codeinput');
-    localStorage.setItem("codeinput", textblock.value);
+    if (!ignorestorage) {
+        var textblock = document.getElementById('codeinput');
+        localStorage.setItem("codeinput", textblock.value);
+    }
 }
 
 // when the page is loaded, load the code from the local storage
 window.onload = function () {
-    var codeinput = localStorage.getItem("codeinput");
-    if (codeinput != null) {
-        document.getElementById('codeinput').value = codeinput;
+    if (!ignorestorage) {
+        var codeinput = localStorage.getItem("codeinput");
+        if (codeinput != null) {
+            document.getElementById('codeinput').value = codeinput;
+        }
     }
 }
 

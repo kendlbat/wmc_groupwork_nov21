@@ -12,15 +12,15 @@
             <div class="fileoptions">
                 <form action="javascript:loadFile();" method="post" enctype="multipart/form-data">
                     <input type="file" name="file" id="file-loader" accept=".js">
-                    <input type="submit" value="📂">
+                    <input type="submit" value="📂" title="Load code from file">
                 </form>
                 <form action="javascript:saveFile();" method="post" enctype="multipart/form-data">
-                    <input type="submit" value="💾">
+                    <input type="submit" value="💾" title="Download code">
                 </form>
             </div>
             <div id="runoptions">
-                <button id="runbtn" title="Run your code" href="javascript:void(0);"><span><img src="/assets/play_btn.svg" id="runbtnimg"></span></button>
-                <button id="outbtn" title="Show the console" onclick="showOutput();" href="javascript:void(0);">&#128196;</button>
+                <button id="runbtn" title="Run code" href="javascript:void(0);"><span><img src="/assets/play_btn.svg" id="runbtnimg"></span></button>
+                <button id="outbtn" title="Show console" onclick="showOutput();" href="javascript:void(0);">&#128196;</button>
             </div>
             <div class="fileoptions">
                 <button id="resetbtn" title="Remove all code" href="javascript:void(0);" onclick="resetTextarea();">&#x1F6AE;</button>
@@ -33,7 +33,7 @@
         <p id="a" style="visibility: hidden;"></p>
     </div>
     <div id="codeindiv">
-        <textarea rows="5" id="codeinput" placeholder="Type your code here..."></textarea>
+        <textarea rows="5" id="codeinput" placeholder="Type your code here..." spellcheck="false"></textarea>
     </div>
     <script src="script.js"></script>
 </body>

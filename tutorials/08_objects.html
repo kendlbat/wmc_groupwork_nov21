@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objekte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;600&family=Open+Sans:wght@300;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1 id="noloadwarn" style="font-size: xx-large;">Es gab einen Fehler beim Laden des Stylesheets!<br>Versuche die Seite erneut zu laden!</h1>
+    <header>
+        <div class="mobileonly" onclick="document.getElementById('menu').classList.toggle('mobileshow')" href="javascript:void(0);">
+            <div class="imgbox" id="menubtn">
+                <img src="/assets/menu.svg" alt="Menu">
+            </div>
+        </div>
+        <h1>JavaScript Tutorials</h1>
+    </header>
+    <main>
+        <article>
+            <section>
+                <h2>Objekte</h2>
+                <p>Wie die meisten modernen Programmiersprachen auch ist JavaScript eine Objektorientierte Programmiersprache.
+                    das hei&szlig;t, dass ein sogenanntes "Objekt" angelegt werden kann, welches mehrere Werte annehmen kann.
+                    Entgegen anderer Programmiersprachen hingegen, k&ouml;nnen in JavaScript Objekte erzeugt werden, die 
+                    unabh&auml;ngig von jeglicher Klasse sind, einer Art Bauanleitung, welche f&uuml;r mehrere Objekte
+                    angewendet werden kann.
+                </p>
+                <p>Grunds&auml;tzlich werden Objekte so initialisiert:</p>
+            </section>
+            <section>
+                <h4>Beispielcode 1:</h4>
+                <div class="code" style="height: 175px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t08-01&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+            </section>
+            <section>
+                <p>Das Objekt wird mit dem <code>const</code> Schl&uuml;sselwort initialisiert, danach folgt der Name des Objekts.
+                    Innerhalb der geschwungenen Klammern findet man die Objekteigenschaften und deren Werte wieder. Wenn man auf diese
+                    Eigenschaften zugreifen m&ouml;chte, so gibt es zwei M&ouml;glichkeiten:
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 2:</h4>
+                <div class="code" style="height: 225px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t08-02&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>
+                    Output: <code>"John"</code>
+                    <code style="display: block;" id="indent">"Doe"</code>
+                </small>
+            </section>
+            <section>
+                <p>Wenn man einem Objekt eine Methode zuweisen m&ouml;chte, so funktioniert das &auml;hnlich wie die
+                    Zuweisung einer Eigenschaft.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 3:</h4>
+                <div class="code" style="height: 250px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t08-03&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>
+                    Output: <code>"John Doe"</code>
+                </small>
+            </section>
+            <section>
+                <h3>Das Schl&uuml;sselwort <code>this</code></h3>
+                <p><code>this</code> wird innerhalb eines Objekt verwendet, um auf die Eigenschaft im Objekt selbst zuzugreifen.
+                    Dies ist besonders wichtig, wenn es einen &Uuml;bergabeparameter geben sollte, welcher den gleichen Namen
+                    tr&auml;gt wie eine Objekteigenschaft.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 3:</h4>
+                <div class="code" style="height: 375px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t08-04&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>
+                    Output: <code>"3 + 5 = 8"</code>
+                </small>
+            </section>
+        </article>
+    </main>
+    <menu id="menu">
+        <h1>Men&uuml;</h1>
+        <div id="mobilemenuexit" class="mobileonly" onclick="document.getElementById('menu').classList.toggle('mobileshow')" href="javascript:void(0);"><img src="/assets/exit.svg" id="menuexitsvg"></div>
+        <ul>
+            <li><a href="/index.html">HOME</a></li>
+            <li>
+                <a href="javascript:void(0);" onclick="document.getElementById('tutorials-submenu').classList.toggle('show');">TUTORIALS</a>
+                <ol id="tutorials-submenu" class="show">
+                    <li><a href="/tutorials/01_introduction.html"> - Einf&uuml;hrung</a></li>
+                    <li><a href="/tutorials/02_variables.html"> - Variablen</a></li>
+                    <li><a href="/tutorials/03_operators.html"> - Operatoren</a></li>
+                    <li><a href="/tutorials/04_if_else.html"> - If-Else</a></li>
+                    <li><a href="/tutorials/05_for_loop.html"> - For-Loop</a></li>
+                    <li><a href="/tutorials/06_while_loop.html"> - While-Loop</a></li>
+                    <li><a href="/tutorials/07_functions.html"> - Funktionen</a></li>
+                    <li id="currentpagebtn"><a href="/tutorials/08_objects.html"> - Objekte</a></li>
+                    <li><a href="/tutorials/09_arrays.html"> - Arrays</a></li>
+                    <li><a href="/tutorials/10_strings.html"> - Strings</a></li>
+                </ol>
+            </li>
+            <li><a href="/run_online.html">RUN CODE</a></li>
+            <li><a href="/imprint.html">IMPRESSUM</a></li>
+        </ul>
+    </menu>
+</body>
+</html>

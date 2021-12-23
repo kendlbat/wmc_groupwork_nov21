@@ -172,6 +172,14 @@ th, td {
         background-color: #fff;
     }
 
+    .show > li {
+        transition: all 0.3s ease-in 0s;
+    }
+
+    .show > li:hover {
+        background: #999;
+    }
+
     header > h1 {
         display: inline;
         margin-left: 6%;

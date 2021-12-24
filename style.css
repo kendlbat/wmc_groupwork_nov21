@@ -7,6 +7,11 @@ body {
     font-family: "Hind Siliguri", sans-serif;
 }
 
+main {
+    padding-right: 2vw;
+    text-align: justify;
+}
+
 .imgbox img {
     width: 100%;
 }

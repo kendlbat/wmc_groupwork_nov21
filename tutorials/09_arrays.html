@@ -99,7 +99,7 @@
             </section>
             <section>
                 <h2 style="text-align: left;">Spezielle Methoden/Eigenschaften von Arrays</h2>
-                <h3>array.length</h3>
+                <h3><code>array.length</code></h3>
                 <p>Eine Eigenschaft w&auml;re die <code>array.length</code> Eigenschaft, mit der man die L&auml;nge
                     des Arrays ausgeben kann.
                 </p>
@@ -115,6 +115,114 @@
             <section>
                 <h4>Anmerkung:</h4>
                 <p><code>array.length</code> entspricht immer der Stelle des letzten Eintrags &plus; 1.</p>
+            </section>
+            <section>
+                <h3><code>array.sort()</code></h3>
+                <p>Wie der Name schon sagt, sortiert die <code>array.sort()</code> Funktion das Array. Bei 
+                    Strings funktioniert dieser Vorgang noch einwandfrei:
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 7:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-07&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>Output: <code>"Audi,BMW,Ford,Porsche,VW,Volvo"</code></small>
+            </section>
+            <section>
+                <p>Bei Arrays mit numerischen Werten hingegen gibt es Probleme. So wird 25 gr&ouml;&szlig;er angesehen als
+                    100, da '2' gr&ouml;&szlig;er ist als '1'. Damit auch numerische Werte geordnet werden k&ouml;nnen, muss der Funktion
+                    eine andere Funktion &uuml;bergeben werden.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 8:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-08&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>Output: <code>"2,9,11,15,25,30,69"</code></small>
+            </section>
+            <section>
+                <p>Der Funktion <code>array.sort()</code> wird eine Funktion &uuml;bergeben, welche die Differenz der beiden Zahlen
+                    berechnet. Das funktioniert deswegen, da die <code>array.sort()</code> Funktion die Werte je nach dem Ergebnis der
+                    Funktion zuordnet. Wenn das Ergebnis von <code>array.sort()</code> gr&ouml;&szlig;er gleich 1 ist, so werden die
+                    Werte vertauscht, ansonsten bleiben sie an ihrer Stelle.
+                </p>
+            </section>
+            <section>
+                <h3><code>array.reverse()</code></h3>
+                <p>Diese Funktion dreht das Array einfach um. Also, das erste Element kommt an die letzte Stelle, das zweite an die
+                    vorletzte und so weiter.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 9:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-09&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>Output: <code>"Porsche,Ford,Volvo,BMW,Audi,VW"</code></small>
+            </section>
+            <section>
+                <h3><code>array.push()</code></h3>
+                <p><code>array.push()</code> ist die einfachste M&ouml;glichkeit, einen Wert in ein Array hineinzugeben.
+                    Dabei wird der Wert einfach hinten angef&uuml;gt.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 10:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-10&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>Output: <code>"Apfel,Banane,Pfirsich,Zitrone"</code></small>
+            </section>
+            <section>
+                <p>Eine andere Methode, einen Wert an ein Array hinten anzuf&uuml;gen w&auml;re &uuml;ber 
+                    <code>array.length</code>.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 11:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-11&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>Output: <code>"Apfel,Banane,Pfirsich,Zitrone"</code></small>
+            </section>
+            <section>
+                <h4>Anmerkung: </h4>
+                <p>Werte sollten im besten Falle <span style="font-weight: 600;">niemals</span> mit Variablen eingef&uuml;gt werden
+                    da dadurch L&ouml;cher im Array entstehen k&ouml;nnten. (Dies ist besonders bei sehr gro&szlig;en Arrays 
+                    gef&auml;hrlich, deswegen immer darauf achten, wie gro&szlig; das Array wirklich ist.)
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 12:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-12&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>Output: <code>"Apfel,Banane,Pfirsich,,,,Zitrone"</code></small>
+            </section>
+            <section>
+                <h3><code>array.pop()</code></h3>
+                <p>Diese Funktion gibt das letzte Element im Array zur&uuml;ck, l&ouml;scht es aus dem Array und verkleinert
+                    dessen L&auml;nge um 1.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 13:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-13&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>
+                    Output: <code>"Zitrone"</code>
+                    <code style="display: block;" class="indent">"Apfel,Banane,Pfirsich"</code>
+                </small>
             </section>
         </article>
     </main>

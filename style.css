@@ -24,10 +24,6 @@ main {
     display: none;
 }
 
-.indent {
-    margin-left: 2%;
-}
-
 .code {
     background: #ddd;
     margin: 0px 2%;
@@ -80,11 +76,11 @@ menu ol {
     color: green;
 }
 
-#indent {
+.indent {
     margin-left: 8px;
 }
 
-#indent::before {
+.indent::before {
     content: "Output: ";
     visibility: hidden;
 }
@@ -210,7 +206,7 @@ th, td {
         top: 90px;
     }
 
-    #indent {
+    .indent {
         margin-left: 5px;
     }
 

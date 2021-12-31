@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;600&family=Open+Sans:wght@300;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1 id="noloadwarn" style="font-size: xx-large;">Es gab einen Fehler beim Laden des Stylesheets!<br>Versuche die Seite erneut zu laden!</h1>
+    <header>
+        <div class="mobileonly" onclick="document.getElementById('menu').classList.toggle('mobileshow')" href="javascript:void(0);">
+            <div class="imgbox" id="menubtn">
+                <img src="/assets/menu.svg" alt="Menu">
+            </div>
+        </div>
+        <h1>JavaScript Tutorials</h1>
+    </header>
+    <main>
+        <article>
+            <section>
+                <h2>Arrays</h2>
+                <p>Arrays sind eine spezielle Form der Variablen, welche mehrere Werte gleichzeitig aufnehmen k&ouml;nnen.</p>
+            </section>
+            <section>
+                <h4>Beispielcode 1:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-01&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+            </section>
+            <section>
+                <h3>Warum w&uuml;rde man ein Array verwenden&quest;</h3>
+                <p>Arrays werden verwendet, wenn man mehrere, gleichartige Variablen kompakt zusammenf&uuml;gen m&ouml;chte.
+                    Ohne Array w&uuml;rde der vorherige Code so aussehen:
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 2:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-02&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+            </section>
+            <section>
+                <p>Nun mag es vielleicht etwas unn&ouml;tig aussehen, aber bei hunderten oder tausenden Eintr&auml;gen ist
+                    ein Array viel kompakter und man kann auf die einzeilen Eintr&auml;ge einfacher zugreifen.
+                </p>
+            </section>
+            <section>
+                <h3>Wie initialisiert man ein Array&quest;</h3>
+                <p>Ein Array wird folgenderma&szlig;en inizialisiert:</p>
+                <code>const array_name = [eintrag1, eintrag2, ...]</code>
+                <p>Dabei muss ein Array nicht in einer Zeile initialisiert werden, sondern kann auch
+                    der &Uuml;bersicht halber in mehreren Zeilen geschrieben werden.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 3:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-03&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+            </section>
+            <section>
+                <p>Eintr&auml;ge k&ouml;nnen aber auch nach der Instanziierung an bestimmten Stellen (mit 0 anfangend) 
+                    eingetragen werden, ohne, dass das Array vorher inizialisiert wurde. Das liegt daran, dass Arrays
+                    in JavaScript, im Gegensatz zu anderen Programmiersprachen, keine feste Gr&ouml;&szlig;e
+                    haben, sondern eine dynamische. Das sieht dann so aus:
+                </p>
+                <code>array_name[Stelle im Array] = wert</code>
+            </section>
+            <section>
+                <h4>Beispielcode 4:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-04&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+            </section>
+            <section>
+                <h3>Zugriff auf die einzelnen Elemente</h3>
+                <p>Der Zugriff auf die einzelnen Elemente funktioniert &auml;hnlich wie das Hinzuf&uuml;gen/&Auml;ndern
+                    eines Elements.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 5:</h4>
+                <div class="code" style="height: 200px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-05&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>Output: <code>"Audi"</code></small>
+            </section>
+            <section>
+                <h2 style="text-align: left;">Spezielle Methoden/Eigenschaften von Arrays</h2>
+                <h3><code>array.length</code></h3>
+                <p>Eine Eigenschaft w&auml;re die <code>array.length</code> Eigenschaft, mit der man die L&auml;nge
+                    des Arrays ausgeben kann.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 6:</h4>
+                <div class="code" style="height: 200px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-06&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>Output: <code>"Arrayl&auml;nge: 3"</code></small>
+            </section>
+            <section>
+                <h4>Anmerkung:</h4>
+                <p><code>array.length</code> entspricht immer der Stelle des letzten Eintrags &plus; 1.</p>
+            </section>
+            <section>
+                <h3><code>array.sort()</code></h3>
+                <p>Wie der Name schon sagt, sortiert die <code>array.sort()</code> Funktion das Array. Bei 
+                    Strings funktioniert dieser Vorgang noch einwandfrei:
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 7:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-07&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>Output: <code>"Audi,BMW,Ford,Porsche,VW,Volvo"</code></small>
+            </section>
+            <section>
+                <p>Bei Arrays mit numerischen Werten hingegen gibt es Probleme. So wird 25 gr&ouml;&szlig;er angesehen als
+                    100, da '2' gr&ouml;&szlig;er ist als '1'. Damit auch numerische Werte geordnet werden k&ouml;nnen, muss der Funktion
+                    eine andere Funktion &uuml;bergeben werden.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 8:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-08&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>Output: <code>"2,9,11,15,25,30,69"</code></small>
+            </section>
+            <section>
+                <p>Der Funktion <code>array.sort()</code> wird eine Funktion &uuml;bergeben, welche die Differenz der beiden Zahlen
+                    berechnet. Das funktioniert deswegen, da die <code>array.sort()</code> Funktion die Werte je nach dem Ergebnis der
+                    Funktion zuordnet. Wenn das Ergebnis von <code>array.sort()</code> gr&ouml;&szlig;er gleich 1 ist, so werden die
+                    Werte vertauscht, ansonsten bleiben sie an ihrer Stelle.
+                </p>
+            </section>
+            <section>
+                <h3><code>array.reverse()</code></h3>
+                <p>Diese Funktion dreht das Array einfach um. Also, das erste Element kommt an die letzte Stelle, das zweite an die
+                    vorletzte und so weiter.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 9:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-09&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>Output: <code>"Porsche,Ford,Volvo,BMW,Audi,VW"</code></small>
+            </section>
+            <section>
+                <h3><code>array.push()</code></h3>
+                <p><code>array.push()</code> ist die einfachste M&ouml;glichkeit, einen Wert in ein Array hineinzugeben.
+                    Dabei wird der Wert einfach hinten angef&uuml;gt.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 10:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-10&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>Output: <code>"Apfel,Banane,Pfirsich,Zitrone"</code></small>
+            </section>
+            <section>
+                <p>Eine andere Methode, einen Wert an ein Array hinten anzuf&uuml;gen w&auml;re &uuml;ber 
+                    <code>array.length</code>.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 11:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-11&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>Output: <code>"Apfel,Banane,Pfirsich,Zitrone"</code></small>
+            </section>
+            <section>
+                <h4>Anmerkung: </h4>
+                <p>Werte sollten im besten Falle <span style="font-weight: 600;">niemals</span> mit Variablen eingef&uuml;gt werden
+                    da dadurch L&ouml;cher im Array entstehen k&ouml;nnten. (Dies ist besonders bei sehr gro&szlig;en Arrays 
+                    gef&auml;hrlich, deswegen immer darauf achten, wie gro&szlig; das Array wirklich ist.)
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 12:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-12&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>Output: <code>"Apfel,Banane,Pfirsich,,,,Zitrone"</code></small>
+            </section>
+            <section>
+                <h3><code>array.pop()</code></h3>
+                <p>Diese Funktion gibt das letzte Element im Array zur&uuml;ck, l&ouml;scht es aus dem Array und verkleinert
+                    dessen L&auml;nge um 1.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 13:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t09-13&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>
+                    Output: <code>"Zitrone"</code>
+                    <code style="display: block;" class="indent">"Apfel,Banane,Pfirsich"</code>
+                </small>
+            </section>
+        </article>
+    </main>
+    <menu id="menu">
+        <h1>Men&uuml;</h1>
+        <div id="mobilemenuexit" class="mobileonly" onclick="document.getElementById('menu').classList.toggle('mobileshow')" href="javascript:void(0);"><img src="/assets/exit.svg" id="menuexitsvg"></div>
+        <ul>
+            <li><a href="/index.html">HOME</a></li>
+            <li>
+                <a href="javascript:void(0);" onclick="document.getElementById('tutorials-submenu').classList.toggle('show');">TUTORIALS</a>
+                <ol id="tutorials-submenu" class="show">
+                    <li><a href="/tutorials/01_introduction.html"> - Einf&uuml;hrung</a></li>
+                    <li><a href="/tutorials/02_variables.html"> - Variablen</a></li>
+                    <li><a href="/tutorials/03_operators.html"> - Operatoren</a></li>
+                    <li><a href="/tutorials/04_if_else.html"> - If-Else</a></li>
+                    <li><a href="/tutorials/05_for_loop.html"> - For-Loop</a></li>
+                    <li><a href="/tutorials/06_while_loop.html"> - While-Loop</a></li>
+                    <li><a href="/tutorials/07_functions.html"> - Funktionen</a></li>
+                    <li><a href="/tutorials/08_objects.html"> - Objekte</a></li>
+                    <li id="currentpagebtn"><a href="/tutorials/09_arrays.html"> - Arrays</a></li>
+                    <li><a href="/tutorials/10_strings.html"> - Strings</a></li>
+                </ol>
+            </li>
+            <li><a href="/run_online.html">RUN CODE</a></li>
+            <li><a href="/imprint.html">IMPRESSUM</a></li>
+        </ul>
+    </menu>
+</body>
+</html>

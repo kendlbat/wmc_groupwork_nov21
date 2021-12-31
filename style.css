@@ -7,6 +7,11 @@ body {
     font-family: "Hind Siliguri", sans-serif;
 }
 
+main {
+    padding-right: 2vw;
+    text-align: justify;
+}
+
 .imgbox img {
     width: 100%;
 }
@@ -17,10 +22,6 @@ body {
 
 #noloadwarn {
     display: none;
-}
-
-.indent {
-    margin-left: 2%;
 }
 
 .code {
@@ -75,11 +76,11 @@ menu ol {
     color: green;
 }
 
-#indent {
+.indent {
     margin-left: 8px;
 }
 
-#indent::before {
+.indent::before {
     content: "Output: ";
     visibility: hidden;
 }
@@ -172,6 +173,14 @@ th, td {
         background-color: #fff;
     }
 
+    .show > li {
+        transition: all 0.3s ease-in 0s;
+    }
+
+    .show > li:hover {
+        background: #999;
+    }
+
     header > h1 {
         display: inline;
         margin-left: 6%;
@@ -197,7 +206,7 @@ th, td {
         top: 90px;
     }
 
-    #indent {
+    .indent {
         margin-left: 5px;
     }
 

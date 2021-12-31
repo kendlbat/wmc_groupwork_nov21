@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;600&family=Open+Sans:wght@300;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1 id="noloadwarn" style="font-size: xx-large;">Es gab einen Fehler beim Laden des Stylesheets!<br>Versuche die Seite erneut zu laden!</h1>
+    <header>
+        <div class="mobileonly" onclick="document.getElementById('menu').classList.toggle('mobileshow')" href="javascript:void(0);">
+            <div class="imgbox" id="menubtn">
+                <img src="/assets/menu.svg" alt="Menu">
+            </div>
+        </div>
+        <h1>JavaScript Tutorials</h1>
+    </header>
+    <main>
+        <article>
+            <section>
+                <h2>Strings</h2>
+                <p>Strings sind Variablen, welche Werte in Form von Text aufnehmen k&ouml;nnen. Diese m&uuml;ssen entweder mit
+                    doppelten oder einfachen Hochkommas initialisiert werden.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 1:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t10-01&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>
+                    Output: <code>"Hello World!"</code>
+                    <code style="display: block;" class="indent">"Hello World! 2"</code>
+                </small>
+            </section>
+            <section>
+                <p>Was man nicht machen sollte, ist, die gleichen Anf&uuml;hrungszeichen mehr als zweimal zu verwenden.
+                    Das interpretiert JavaScript dann falsch. Um das zu vermeiden, kann man, wenn Anf&uuml;hrungszeichen auch als
+                    solche angegeben werden sollen, diese mit einem "&Backslash;" ank&uuml;ndigen. M&ouml;chte man dann auch noch ein
+                    "&Backslash;" ausgeben, so muss dies mit "&Backslash;&Backslash;" erfolgen.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 2:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t10-02&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>
+                    Output: <code>"So kann man "Anführungszeichen" ausgeben."</code>
+                    <code style="display: block;" class="indent">"Und so ein Backslash: &Backslash;"</code>
+                </small>
+            </section>
+            <section>
+                <p>Weitere solcher Codes sind: </p>
+                <table>
+                    <tr>
+                        <th>Code</th>
+                        <th style="width: 30%;">Folge</th>
+                    </tr>
+                    <tr>
+                        <td>\b</td>
+                        <td>L&ouml;schen des letzten Zeichens.</td>
+                    </tr>
+                    <tr>
+                        <td>\t</td>
+                        <td>Seitenumbruch</td>
+                    </tr>
+                    <tr>
+                        <td>\n</td>
+                        <td>Neue Zeile</td>
+                    </tr>
+                    <tr>
+                        <td>\r</td>
+                        <td>Geh an den Anfang der Zeile.</td>
+                    </tr>
+                    <tr>
+                        <td>\t</td>
+                        <td>Horizontaler Abstand</td>
+                    </tr>
+                    <tr>
+                        <td>\v</td>
+                        <td>Vertikaler Abstand</td>
+                    </tr>
+                </table>
+            </section>
+            <section>
+                <h3>Strings konkatinieren</h3>
+                <p>Strings konkatinieren bedeutet, dass zwei oder mehrere Strings zu einem vereintwerden.
+                    Dies kann man ganz einfach mit einem &plus; bewerkstelligen.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 3:</h4>
+                <div class="code">
+                    <iframe src="/online_run/frame.html?embed=1&file=t10-03&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>
+                    Output: <code>"Test f&uuml;r Konkatination"</code>
+                </small>
+            </section>
+            <section>
+                <h3>Vergleichen von Strings</h3>
+                <p>Strings k&ouml;nnen, solange beide als Variable deklariert werden, sowohl mit "==" als auch mit "==="
+                    verglichen werden.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 4:</h4>
+                <div class="code" style="height: 200px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t10-04&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>
+                    Output: <code>"x==y"</code>
+                    <code style="display: block;" class="indent">"x===y"</code>
+                </small>
+            </section>
+            <section>
+                <p>Wenn eines als Variable und eines als Objekt deklariert wird, so funktioniert der "===" Operator nicht mehr,
+                    da beide Strings zwar den gleichen Inhalt haben, aber nicht vom selben Typ sind.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 5:</h4>
+                <div class="code" style="height: 200px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t10-05&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>
+                    Output: <code>"x==y"</code>
+                    <code style="display: block;" class="indent">"x!==y"</code>
+                </small>
+            </section>
+            <section>
+                <p>Sobald beide Strings als Objekte angelegt werden, funktionieren beide Operatoren nicht mehr.</p>
+            </section>
+            <section>
+                <h4>Beispielcode 6:</h4>
+                <div class="code" style="height: 200px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t10-06&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>
+                    Output: <code>"x!=y"</code>
+                    <code style="display: block;" class="indent">"x!==y"</code>
+                </small>
+            </section>
+            <section>
+                <p>Um diese Objekte zu vergleichen, muss man die Objekte erst in einen primitiven Datentyp umwandeln.
+                    das geht mit der <code>String.valueOf()</code>-Methode.
+                </p>
+            </section>
+            <section>
+                <h4>Beispielcode 7:</h4>
+                <div class="code" style="height: 200px;">
+                    <iframe src="/online_run/frame.html?embed=1&file=t10-07&outlines=20&disabled=1" frameborder="0"
+                        style="height: 100%;"></iframe>
+                </div>
+                <small>
+                    Output: <code>"x==y"</code>
+                    <code style="display: block;" class="indent">"x===y"</code>
+                </small>
+            </section>
+        </article>
+    </main>
+    <menu id="menu">
+        <h1>Men&uuml;</h1>
+        <div id="mobilemenuexit" class="mobileonly" onclick="document.getElementById('menu').classList.toggle('mobileshow')" href="javascript:void(0);"><img src="/assets/exit.svg" id="menuexitsvg"></div>
+        <ul>
+            <li><a href="/index.html">HOME</a></li>
+            <li>
+                <a href="javascript:void(0);" onclick="document.getElementById('tutorials-submenu').classList.toggle('show');">TUTORIALS</a>
+                <ol id="tutorials-submenu" class="show">
+                    <li><a href="/tutorials/01_introduction.html"> - Einf&uuml;hrung</a></li>
+                    <li><a href="/tutorials/02_variables.html"> - Variablen</a></li>
+                    <li><a href="/tutorials/03_operators.html"> - Operatoren</a></li>
+                    <li><a href="/tutorials/04_if_else.html"> - If-Else</a></li>
+                    <li><a href="/tutorials/05_for_loop.html"> - For-Loop</a></li>
+                    <li><a href="/tutorials/06_while_loop.html"> - While-Loop</a></li>
+                    <li><a href="/tutorials/07_functions.html"> - Funktionen</a></li>
+                    <li><a href="/tutorials/08_objects.html"> - Objekte</a></li>
+                    <li><a href="/tutorials/09_arrays.html"> - Arrays</a></li>
+                    <li id="currentpagebtn"><a href="/tutorials/10_strings.html"> - Strings</a></li>
+                </ol>
+            </li>
+            <li><a href="/run_online.html">RUN CODE</a></li>
+            <li><a href="/imprint.html">IMPRESSUM</a></li>
+        </ul>
+    </menu>
+</body>
+</html>

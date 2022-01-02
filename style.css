@@ -233,6 +233,7 @@ th, td {
     menu > ul {
         position: fixed;
         top: 90px;
+        font-size: x-large;
     }
 
     .indent {

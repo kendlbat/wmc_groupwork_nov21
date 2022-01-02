@@ -287,7 +287,7 @@ function resetTextarea() {
 }
 
 function updateDivHeight() {
-    let value = String(window.innerHeight - document.getElementById("options").offsetHeight - 20) + "px";
+    let value = String(window.innerHeight - document.getElementById("options").offsetHeight - 40) + "px";
     document.getElementById("codeindiv").style.height = value;
 }
 

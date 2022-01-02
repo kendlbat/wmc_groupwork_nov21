@@ -4,6 +4,10 @@ body * {
     -webkit-box-sizing: border-box;
 }
 
+body {
+    margin: 10px;
+}
+
 body.embed {
     overflow: hidden;
 }

@@ -285,3 +285,13 @@ function resetTextarea() {
         localStorage.removeItem("codeinput");
     }
 }
+
+function updateDivHeight() {
+    document.getElementById("codeindiv").style.height = String(window.innerHeight * 0.82) + "px";
+}
+
+document.body.onresize = function () {
+    updateDivHeight();
+}
+
+updateDivHeight();

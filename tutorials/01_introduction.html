@@ -67,10 +67,10 @@
         <div id="mobilemenuexit" class="mobileonly" onclick="document.getElementById('menu').classList.toggle('mobileshow')" href="javascript:void(0);"><img src="/assets/exit.svg" id="menuexitsvg"></div>
         <ul>
             <li><a href="/index.html">HOME</a></li>
-            <li>
+            <li class="menuexpand">
                 <a href="javascript:void(0);"
                     onclick="document.getElementById('tutorials-submenu').parentElement.classList.toggle('menuexpand');">TUTORIALS</a>
-                <ol id="tutorials-submenu" class="show">
+                <ol id="tutorials-submenu">
                     <li id="currentpagebtn"><a href="/tutorials/01_introduction.html"> - Einf&uuml;hrung</a></li>
                     <li><a href="/tutorials/02_variables.html"> - Variablen</a></li>
                     <li><a href="/tutorials/03_operators.html"> - Operatoren</a></li>

@@ -253,6 +253,11 @@ document.getElementById("codeinput").onkeydown = function (e) {
             this.value = this.value.substring(0, start) + "''" + this.value.substring(end);
             this.selectionStart = this.selectionEnd = start + 1;
         }
+
+        if (e.key == "F5") {
+            e.preventDefault();
+            runJavascriptInTextblock();
+        }
     }
 }
 
@@ -280,3 +285,14 @@ function resetTextarea() {
         localStorage.removeItem("codeinput");
     }
 }
+
+function updateDivHeight() {
+    let value = String(window.innerHeight - document.getElementById("options").offsetHeight - 40) + "px";
+    document.getElementById("codeindiv").style.height = value;
+}
+
+document.body.onresize = function () {
+    updateDivHeight();
+}
+
+updateDivHeight();

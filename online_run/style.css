@@ -4,6 +4,10 @@ body * {
     -webkit-box-sizing: border-box;
 }
 
+body {
+    margin: 10px;
+}
+
 body.embed {
     overflow: hidden;
 }
@@ -39,7 +43,6 @@ body.embed {
 }
 
 #codeindiv {
-    height: 82vh;
     width: 100%;
     overflow: hidden;
 }
@@ -78,7 +81,7 @@ body.embed {
     display: block;
     background-color: #2e3440;
     color: #fff;
-    height: 97%;
+    height: 100%;
     width: 100%;
     resize: none;
     border: 0px;
@@ -109,12 +112,6 @@ body.embed {
 
 #codeinput {
     font-family: "Roboto Mono", monospace;
-}
-
-@media screen and (max-width: 600px) {
-    #options button, #options input {
-        font-size: 35pt;
-    }
 }
 
 @media print {

@@ -28,6 +28,7 @@ main {
     background: #ddd;
     margin: 0px 2%;
     padding-left: 1%;
+    height: 14rem;
 }
 
 .code + small {
@@ -49,22 +50,23 @@ code > p {
 .code iframe {
     width: 100%;
     height: 100%;
-    overflow: hidden;
 }
 
 .code {
     padding: 0px 5px 5px 5px;
+    resize: vertical;
+    overflow: hidden;
 }
 
 menu ol {
     color: #0066ff;
 }
 
-#tutorials-submenu.show {
+li.menuexpand > #tutorials-submenu {
     display: block;
 }
 
-#tutorials-submenu:not(.show) {
+li:not(.menuexpand) > #tutorials-submenu {
     display: none;
 }
 
@@ -132,7 +134,7 @@ th, td {
     }
 
     body {
-        padding-left: 195px;
+        padding-left: 205px;
     }
     
     article {
@@ -143,13 +145,46 @@ th, td {
         font-size: 1.2em;
     }
 
+    menu > ul {
+        padding-left: 0px;
+    }
+
+    menu > ul > li {
+        padding: 0px;
+        font-size: larger;
+    }
+    
+    menu > ul > li > a {
+        padding: .1em 0px .1em 40px;
+        display: block;
+    }
+
+    menu > ul > li > a:hover {
+        background-color: rgba(0, 0, 0, .1);
+    }
+
+    #tutorials-submenu {
+        list-style-type: none;
+        padding: 0px;
+        counter-reset: submenu-list-counter;
+    }
+
+    #tutorials-submenu > li > a {
+        padding-left: 60px;
+    }
+
+    #tutorials-submenu > li > a::before {
+        content: counter(submenu-list-counter, decimal-leading-zero) ". ";
+        counter-increment: submenu-list-counter;
+    }
+
     menu {
         box-sizing: border-box;
         position: fixed;
         padding: 1% 0px;
-        width: 195px;
-        max-width: 195px;
-        min-width: 195px;
+        width: 205px;
+        max-width: 205px;
+        min-width: 205px;
         min-height: 100%;
         top: 0px;
         left: 0px;
@@ -173,11 +208,7 @@ th, td {
         background-color: #fff;
     }
 
-    .show > li {
-        transition: all 0.3s ease-in 0s;
-    }
-
-    .show > li:hover {
+    .menuexpand > * > li:hover {
         background: #999;
     }
 
@@ -204,6 +235,7 @@ th, td {
     menu > ul {
         position: fixed;
         top: 90px;
+        font-size: x-large;
     }
 
     .indent {

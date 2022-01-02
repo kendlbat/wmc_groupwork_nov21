@@ -253,6 +253,11 @@ document.getElementById("codeinput").onkeydown = function (e) {
             this.value = this.value.substring(0, start) + "''" + this.value.substring(end);
             this.selectionStart = this.selectionEnd = start + 1;
         }
+
+        if (e.key == "F5") {
+            e.preventDefault();
+            runJavascriptInTextblock();
+        }
     }
 }
 

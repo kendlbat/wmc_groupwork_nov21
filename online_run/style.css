@@ -39,7 +39,7 @@ body.embed {
 }
 
 #codeindiv {
-    height: 82vh;
+    height: calc(82%);
     width: 100%;
     overflow: hidden;
 }

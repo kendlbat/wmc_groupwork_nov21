@@ -201,7 +201,7 @@ th, td {
         box-sizing: border-box;
         position: absolute;
         left: 200px;
-        max-width: calc(100% - 205px);
+        max-width: calc(100% - 215px);
         width: 85%;
         overflow-x: hidden;
         margin: 0px 1% 0px;

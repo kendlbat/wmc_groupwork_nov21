@@ -58,5 +58,50 @@
         "examples": {
             "01": "Aufruf und Rückgabe einer Funktion"
         }
+    },
+    "t08": {
+        "name": "Objekte",
+        "description": "Tutorial 8",
+        "examples": {
+            "01": "Initialisierung eines Objektes",
+            "02": "Zugriff auf Daten eines Objektes",
+            "03": "Deklaration von Funktionen in Objekten",
+            "04": "Das Schlüsselwort THIS",
+            "05": "Instanziierung von Objekten aus Klassen",
+            "06": "Objekte gespeichert in Variablen",
+            "07": "FOR-IN Schleife über Objekte"
+        }
+    },
+    "t09": {
+        "name": "Arrays",
+        "description": "Tutorial 9",
+        "examples": {
+            "01": "Mehrere Datenpunkten in EINER Variable",
+            "02": "Beispiel ohne der Nutzung eines Arrays",
+            "03": "Initialisierung eines Arrays",
+            "04": "Zuweisung von Daten an bestimmten Positionen",
+            "05": "Zugriff auf einen Datenpunkt an einer Position",
+            "06": "array.length",
+            "07": "array.sort() - Strings",
+            "08": "array.sort() - Zahlen",
+            "09": "array.reverse()",
+            "10": "array.push()",
+            "11": "Manuelles PUSH per array.length",
+            "12": "Falsche Nutzung vom manuellen PUSH",
+            "13": "array.pop()"
+        }
+    },
+    "t10": {
+        "name": "Strings",
+        "description": "Tutorial 10",
+        "examples": {
+            "01": "Initialisierung von Strings",
+            "02": "Backslash als Escape-Sequenz",
+            "03": "Konkatenation",
+            "04": "Vergleichen von Strings",
+            "05": "Vergleichen von String mit anderen Objekten",
+            "06": "Vergleichen von Strings als separate Objekte",
+            "07": "Vergleichen von String-Objekten mit .valueOf()"
+        }
     }
 }

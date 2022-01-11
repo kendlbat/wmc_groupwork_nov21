@@ -36,6 +36,10 @@ body.embed {
     font-size: 26pt;
 }
 
+.fileoptions input:hover, .fileoptions button:hover, #runoptions button:hover {
+    cursor: pointer;
+}
+
 #runoptions {
     display: flex;
     flex-direction: row;

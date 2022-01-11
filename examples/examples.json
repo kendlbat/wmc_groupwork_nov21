@@ -3,15 +3,15 @@
         "name": "Variablen",
         "description": "Tutorial 2",
         "examples": {
-            "01": "Variablendeklaration: Number",
-            "02": "Variablendeklaration: String",
-            "03": "VAR - Deklaration ohne Wert",
-            "04": "Redeklaration von LET",
-            "05": "Redeklaration von VAR",
-            "06": "VAR als globale Variable",
-            "07": "LET als globale Variable",
-            "08": "LET als lokale Variable",
-            "09": "Änderung von CONST",
+            "1": "Variablendeklaration: Number",
+            "2": "Variablendeklaration: String",
+            "3": "VAR - Deklaration ohne Wert",
+            "4": "Redeklaration von LET",
+            "5": "Redeklaration von VAR",
+            "6": "VAR als globale Variable",
+            "7": "LET als globale Variable",
+            "8": "LET als lokale Variable",
+            "9": "Änderung von CONST",
             "10": "Deklaration von CONST ohne Wert"
         }
     },
@@ -19,72 +19,72 @@
         "name": "Operatoren",
         "description": "Tutorial 3",
         "examples": {
-            "01": "Addition (Konkatenation) von String",
-            "02": "+= als kürzere Variante",
-            "03": "Addition von String und Number"
+            "1": "Addition (Konkatenation) von String",
+            "2": "+= als kürzere Variante",
+            "3": "Addition von String und Number"
         }
     },
     "t04": {
         "name": "IF-ELSE",
         "description": "Tutorial 4",
         "examples": {
-            "01": "Verwendung von Booleans",
-            "02": "Vergleichen von Werten",
-            "03": "Zusammenfassung mehrerer Booleans (Vergleiche)",
-            "04": "SWITCH-Statement",
-            "05": "SWITCH ohne BREAK"
+            "1": "Verwendung von Booleans",
+            "2": "Vergleichen von Werten",
+            "3": "Zusammenfassung mehrerer Booleans (Vergleiche)",
+            "4": "SWITCH-Statement",
+            "5": "SWITCH ohne BREAK"
         }
     },
     "t05": {
         "name": "FOR-Loop",
         "description": "Tutorial 5",
         "examples": {
-            "01": "Erhöhung vom Zähler",
-            "02": "Beispiel ohne den Zähler zu setzen",
-            "03": "Erhöhung von Zähler außerhalb des 3ten Bereichs"
+            "1": "Erhöhung vom Zähler",
+            "2": "Beispiel ohne den Zähler zu setzen",
+            "3": "Erhöhung von Zähler außerhalb des 3ten Bereichs"
         }
     },
     "t06": {
         "name": "WHILE-Loop",
         "description": "Tutorial 6",
         "examples": {
-            "01": "WHILE-Schleife als Alternative zu FOR",
-            "02": "DO-WHILE-Schleife als Gegenstück zu WHILE"
+            "1": "WHILE-Schleife als Alternative zu FOR",
+            "2": "DO-WHILE-Schleife als Gegenstück zu WHILE"
         }
     },
     "t07": {
         "name": "Funktionen",
         "description": "Tutorial 7",
         "examples": {
-            "01": "Aufruf und Rückgabe einer Funktion"
+            "1": "Aufruf und Rückgabe einer Funktion"
         }
     },
     "t08": {
         "name": "Objekte",
         "description": "Tutorial 8",
         "examples": {
-            "01": "Initialisierung eines Objektes",
-            "02": "Zugriff auf Daten eines Objektes",
-            "03": "Deklaration von Funktionen in Objekten",
-            "04": "Das Schlüsselwort THIS",
-            "05": "Instanziierung von Objekten aus Klassen",
-            "06": "Objekte gespeichert in Variablen",
-            "07": "FOR-IN Schleife über Objekte"
+            "1": "Initialisierung eines Objektes",
+            "2": "Zugriff auf Daten eines Objektes",
+            "3": "Deklaration von Funktionen in Objekten",
+            "4": "Das Schlüsselwort THIS",
+            "5": "Instanziierung von Objekten aus Klassen",
+            "6": "Objekte gespeichert in Variablen",
+            "7": "FOR-IN Schleife über Objekte"
         }
     },
     "t09": {
         "name": "Arrays",
         "description": "Tutorial 9",
         "examples": {
-            "01": "Mehrere Datenpunkten in EINER Variable",
-            "02": "Beispiel ohne der Nutzung eines Arrays",
-            "03": "Initialisierung eines Arrays",
-            "04": "Zuweisung von Daten an bestimmten Positionen",
-            "05": "Zugriff auf einen Datenpunkt an einer Position",
-            "06": "array.length",
-            "07": "array.sort() - Strings",
-            "08": "array.sort() - Zahlen",
-            "09": "array.reverse()",
+            "1": "Mehrere Datenpunkte in EINER Variable",
+            "2": "Beispiel ohne der Nutzung eines Arrays",
+            "3": "Initialisierung eines Arrays",
+            "4": "Zuweisung von Daten an bestimmten Positionen",
+            "5": "Zugriff auf einen Datenpunkt an einer Position",
+            "6": "array.length",
+            "7": "array.sort() - Strings",
+            "8": "array.sort() - Zahlen",
+            "9": "array.reverse()",
             "10": "array.push()",
             "11": "Manuelles PUSH per array.length",
             "12": "Falsche Nutzung vom manuellen PUSH",
@@ -95,13 +95,13 @@
         "name": "Strings",
         "description": "Tutorial 10",
         "examples": {
-            "01": "Initialisierung von Strings",
-            "02": "Backslash als Escape-Sequenz",
-            "03": "Konkatenation",
-            "04": "Vergleichen von Strings",
-            "05": "Vergleichen von String mit anderen Objekten",
-            "06": "Vergleichen von Strings als separate Objekte",
-            "07": "Vergleichen von String-Objekten mit .valueOf()"
+            "1": "Initialisierung von Strings",
+            "2": "Backslash als Escape-Sequenz",
+            "3": "Konkatenation",
+            "4": "Vergleichen von Strings",
+            "5": "Vergleichen von String mit anderen Objekten",
+            "6": "Vergleichen von Strings als separate Objekte",
+            "7": "Vergleichen von String-Objekten mit .valueOf()"
         }
     }
 }

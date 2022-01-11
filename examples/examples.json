@@ -76,7 +76,7 @@
         "name": "Arrays",
         "description": "Tutorial 9",
         "examples": {
-            "1": "Mehrere Datenpunkten in EINER Variable",
+            "1": "Mehrere Datenpunkte in EINER Variable",
             "2": "Beispiel ohne der Nutzung eines Arrays",
             "3": "Initialisierung eines Arrays",
             "4": "Zuweisung von Daten an bestimmten Positionen",

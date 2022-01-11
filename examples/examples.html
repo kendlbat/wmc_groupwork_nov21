@@ -170,7 +170,7 @@
                     // examplelink.href = `/online_run/frame.html?file=${element}-${example}`;
 
                     examplelink.href = "javascript:void(0);";
-                    examplelink.onclick = () => { loadFileToIDE(`${element}-${example}`); };
+                    examplelink.onclick = () => { loadFileToIDE(`${element}-${(String(example).length < 2 ? `0${example}` : String(example))}`); };
                     exampleitem.appendChild(examplelink);
                     examplelist.appendChild(exampleitem);
                 }

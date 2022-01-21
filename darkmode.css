@@ -1,0 +1,64 @@
+@media screen and (prefers-color-scheme: dark) {
+    .code {
+        background-color: rgb(43, 47, 49);
+        padding-top: 5px;
+    }
+    
+    textarea#codeinput {
+        background-color: #2e3440;
+    }
+
+    img#runbtnimg {
+        filter: invert(100%);
+    }
+
+    input, select, button {
+        background-color: #181a1b;
+    }
+
+    * {
+        color: white;
+    }
+    
+    body {
+        background-color: rgb(24, 26, 27);
+    }
+    
+    tr:nth-child(even) {
+        background-color: rgb(34, 36, 38);
+    }
+    
+    @media screen and (min-width: 600px) {
+        menu {
+            background-color: #484e51;
+        }
+    
+        .menuexpand > * > li:hover {
+            background: #52585C;
+        }
+        
+        main {
+            background-color: rgb(24, 26, 27);
+        }
+    }
+    
+    @media screen and (max-width: 599px) {
+        #menubtn {
+            border: 1px solid white;
+        }
+    
+        #menubtn img {
+            filter: invert(100%);
+        }
+    
+        #menuexitsvg {
+            filter: invert(100%);
+        }
+    
+        #menu {
+            background-color: #484e51;
+        }
+    }
+    
+    
+}

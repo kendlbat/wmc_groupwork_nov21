@@ -1,0 +1,48 @@
+body.darkmode .code {
+    background-color: rgb(43, 47, 49);
+}
+
+body.darkmode * {
+    color: white;
+}
+
+body.darkmode {
+    background-color: rgb(24, 26, 27);
+}
+
+body.darkmode tr:nth-child(even) {
+    background-color: rgb(34, 36, 38);
+}
+
+@media screen and (min-width: 600px) {
+    body.darkmode menu {
+        background-color: #484e51;
+    }
+
+    body.darkmode .menuexpand > * > li:hover {
+        background: #52585C;
+    }
+    
+    body.darkmode main {
+        background-color: rgb(24, 26, 27);
+    }
+}
+
+@media screen and (max-width: 599px) {
+    body.darkmode #menubtn {
+        border: 1px solid white;
+    }
+
+    body.darkmode #menubtn img {
+        filter: invert(100%);
+    }
+
+    body.darkmode #menuexitsvg {
+        filter: invert(100%);
+    }
+
+    body.darkmode #menu {
+        background-color: #484e51;
+    }
+}
+

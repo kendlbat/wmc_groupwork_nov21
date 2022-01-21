@@ -20,7 +20,7 @@
         color: white;
     }
     
-    body {
+    body, main{
         background-color: rgb(24, 26, 27);
     }
     
@@ -35,10 +35,6 @@
     
         .menuexpand > * > li:hover {
             background: #52585C;
-        }
-        
-        main {
-            background-color: rgb(24, 26, 27);
         }
     }
     

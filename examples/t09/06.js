@@ -4,4 +4,4 @@ const cars = [
     "BMW"
 ];
 
-console.log("Arraylänge: " +cars.length);
+console.log("Arraylänge: " + cars.length);

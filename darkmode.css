@@ -27,10 +27,15 @@
     tr:nth-child(even) {
         background-color: rgb(34, 36, 38);
     }
+
+    a {
+        color: rgb(51, 156, 255);
+    }
     
     @media screen and (min-width: 600px) {
         menu {
-            background-color: #484e51;
+            background-color: rgb(46, 50, 52);
+            border-right-color: rgb(134, 125, 110);
         }
     
         .menuexpand > * > li:hover {

@@ -31,6 +31,16 @@
     a {
         color: rgb(51, 156, 255);
     }
+
+    #toosmallwarn {
+        background-color: rgb(46, 50, 52) !important;
+        border: 1px solid white !important;
+    }
+
+    #toosmallwarn button {
+        border: 1px solid white;
+        border-radius: 5px;
+    }
     
     @media screen and (min-width: 600px) {
         menu {

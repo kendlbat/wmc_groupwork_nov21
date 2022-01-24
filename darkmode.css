@@ -52,7 +52,7 @@
             border-right-color: rgb(134, 125, 110);
         }
     
-        .menuexpand > * > li:hover {
+        .menuexpand > * > li:hover, #menu > ul > li > a:hover {
             background: #52585C;
         }
     }

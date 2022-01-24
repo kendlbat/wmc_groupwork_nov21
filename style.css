@@ -257,6 +257,10 @@ th, td {
         box-sizing: border-box;
     }
 
+    #tutorials-submenu > li{
+        color: #0066ff;
+    }
+
     /*Center the <h1> so it is next to the svg image*/
     header > h1 {
         display: inline;

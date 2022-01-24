@@ -73,6 +73,10 @@
         #menu {
             background-color: #484e51;
         }
+
+        #currentpagebtn {
+            color: green !important;
+        }
     }
     
     

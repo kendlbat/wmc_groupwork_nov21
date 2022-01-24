@@ -32,6 +32,10 @@
         color: rgb(51, 156, 255);
     }
 
+    #tutorials-submenu > li {
+        color: rgb(51, 156, 255);
+    }
+
     #toosmallwarn {
         background-color: rgb(46, 50, 52) !important;
         border: 1px solid white !important;
@@ -48,7 +52,7 @@
             border-right-color: rgb(134, 125, 110);
         }
     
-        .menuexpand > * > li:hover {
+        .menuexpand > * > li:hover, #menu > ul > li > a:hover {
             background: #52585C;
         }
     }

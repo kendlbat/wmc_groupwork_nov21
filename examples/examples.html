@@ -125,7 +125,7 @@
             </li>
             <li><a href="../run_online.html">RUN CODE</a></li>
             <li><a href="../imprint.html">IMPRESSUM</a></li>
-            <li id="currentpagebtn"><a href="../examples/examples.html">ALLE BEISPIELE</a></li>
+            <li id="currentpagebtn"><a href="./examples.html">ALLE BEISPIELE</a></li>
         </ul>
     </menu>
     <script>
@@ -134,7 +134,7 @@
         }
 
         async function main() {
-            var jsondata = await fetch('../examples/examples.json');
+            var jsondata = await fetch('./examples.json');
             jsondata = await jsondata.json();
 
             console.log(jsondata);

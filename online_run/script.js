@@ -117,7 +117,7 @@ function parseParams() {
                 textblock.value = this.responseText.trimStart();
             }
         };
-        xhttp.open("GET", "/examples/" + filename, true);
+        xhttp.open("GET", "../examples/" + filename, true);
         xhttp.send();
     }
 
